@@ -8,108 +8,44 @@ const Navbar = () => {
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
     const toggleMediaDropdown = () => setMediaDropdownOpen(!mediaDropdownOpen);
 
-    const navbarStyle = {
-        position: 'fixed', // Ensure the navbar stays at the top
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000, // Ensure it appears above other content
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '10px 20px',
-        backgroundColor: 'white',
-        borderBottom: '2px solid #007bff', // Blue bottom border
-        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', // Add a slight shadow for elevation
-    };
-
-    const logoStyle = {
-        height: '50px',
-    };
-
-    const navLinksStyle = {
-        listStyle: 'none',
-        display: 'flex',
-        gap: '20px',
-        margin: 0,
-        padding: 0,
-    };
-
-    const navLinkStyle = {
-        position: 'relative',
-        cursor: 'pointer',
-    };
-
-    const dropdownStyle = {
-        position: 'absolute',
-        top: '100%',
-        left: 0,
-        backgroundColor: 'white',
-        border: '1px solid #ccc',
-        zIndex: 1000,
-    };
-
-    const dropdownItemStyle = {
-        padding: '10px',
-        cursor: 'pointer',
-    };
-
-    const buttonStyle = {
-        padding: '5px 15px',
-        border: 'none',
-        borderRadius: '50px',
-        color: 'white',
-        gap: '5px',
-    };
-
-    const loginButtonStyle = {
-        ...buttonStyle,
-        backgroundColor: '#007bff', // Blue
-    };
-
-    const registerButtonStyle = {
-        ...buttonStyle,
-        backgroundColor: '#28a745', // Green
-    };
-
     return (
-        <nav style={navbarStyle}>
+        <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3 bg-white border-b-2 border-blue-500 shadow-md">
             {/* Logo */}
             <div className="logo">
-                <img src="/kws-logo.png" alt="Logo" style={logoStyle} />
+                <img src="/kws-logo.png" alt="Logo" className="h-12" />
             </div>
 
             {/* Navigation Links */}
-            <ul style={navLinksStyle}>
-                <li style={navLinkStyle}>HOME</li>
-                <li style={navLinkStyle}>ABOUT US</li>
+            <ul className="flex gap-5 list-none m-0 p-0">
+                <li className="relative cursor-pointer">HOME</li>
+                <li className="relative cursor-pointer">ABOUT US</li>
                 <li
-                    style={navLinkStyle}
+                    className="relative cursor-pointer"
                     onMouseEnter={toggleDropdown}
                     onMouseLeave={toggleDropdown}
                 >
                     DOWNLOAD
                     {dropdownOpen && (
-                        <div style={dropdownStyle}>
-                            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                <li style={dropdownItemStyle}>Item 1</li>
-                                <li style={dropdownItemStyle}>Item 2</li>
+                        <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg">
+                            <ul className="list-none m-0 p-0">
+                                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Item 1</li>
+                                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Item 2</li>
                             </ul>
                         </div>
                     )}
                 </li>
-                <li style={navLinkStyle}>CONTACT US</li>
+                <li className="relative cursor-pointer">CONTACT US</li>
                 <li
-                    style={navLinkStyle}
+                    className="relative cursor-pointer"
                     onMouseEnter={toggleMediaDropdown}
                     onMouseLeave={toggleMediaDropdown}
                 >
                     MEDIA
                     {mediaDropdownOpen && (
-                        <div style={dropdownStyle}>
-                            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                <li style={dropdownItemStyle}>Item 1</li>
-                                <li style={dropdownItemStyle}>Item 2</li>
+                        <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg">
+                            <ul className="list-none m-0 p-0">
+                                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Item 1</li>
+                                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Item 2</li>
                             </ul>
                         </div>
                     )}
@@ -117,10 +53,14 @@ const Navbar = () => {
             </ul>
 
             {/* Search and Buttons */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                <IoSearchSharp size={20} />
-                <button style={loginButtonStyle}>LOGIN</button>
-                <button style={registerButtonStyle}>REGISTER</button>
+            <div className="flex items-center gap-4">
+                <IoSearchSharp size={20} className="cursor-pointer" />
+                <button className="px-4 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-600">
+                    LOGIN
+                </button>
+                <button className="px-4 py-2 text-white bg-green-500 rounded-full hover:bg-green-600">
+                    REGISTER
+                </button>
             </div>
         </nav>
     );
