@@ -1,33 +1,44 @@
-import React from 'react'
+import React from 'react';
 
-const Story = () => {
+const Partners = () => {
   return (
-    <div className=' bg-white relative w-full h-screen mt-5 '>
-        <div className='  flex items-center justify-center   ' >
-            <h1 className=' ml-10 mr-10 pl-10 pr-10 mb-5 text-[60px] leading-normal text-[#000] capitalize ' >Our Partners <br />
-            <span className='text-[24px]   justify-between mt-0  '>Trusted Collaborative Allies</span></h1>
-        </div>
+    <div className="relative w-full min-h-screen bg-[#dce8df] flex flex-col items-center justify-center px-4">
+      {/* Title Section */}
+      <div className="text-center mb-10">
+        <h1 className="text-[36px] md:text-[48px] font-bold text-[#000]">
+          Our Partners
+        </h1>
+        <p className="text-[16px] md:text-[20px] text-[#274d39] leading-[1.5]">
+          Trusted Collaborative Allies
+        </p>
+      </div>
 
-        <div className='mt-5 flex items-center justify-center '>
-          <div className='  h-[40vh] w-[80vw] bg-blue-600 rounded-3xl '>
-              <div className='images h-5 w-[] flex gap-5 px-5 mt-3 mb-3  '>
-                <div className='image1 '>
-                    <img src="ratnagiri.png" alt="ratnagiri" />
-                </div>
-                <div className='image2 '>
-                    <img src="thane.png" alt="ratnagiri" />
-                </div>
-                <div className='image3 '>
-                    <img src="sindhudurg.png" alt="ratnagiri" />
-                </div>
-                <div className='image4 '>
-                    <img src="raigad.png" alt="ratnagiri" />
-                </div>
-              </div>
-          </div>
+      {/* Partners Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="flex items-center justify-center  w-full h-[195px] shadow-md rounded-lg">
+          <img src="karak-makani.png" alt="karak-makani" className="h-auto max-w-full" />
         </div>
+        <div className="flex items-center justify-center  w-full h-[195px] shadow-md rounded-lg">
+          <img src="metro-medical.png" alt="metro-medical" className="h-auto max-w-full" />
+        </div>
+        <div className="flex items-center justify-center  w-full h-[195px] shadow-md rounded-lg">
+          <img src="dadabhai-travel.png" alt="dadabhai-travel" className="h-auto max-w-full" />
+        </div>
+        <div className="flex items-center justify-center  w-full h-[195px] shadow-md rounded-lg">
+          <img src="khaugalli.png" alt="khaugalli" className="h-auto max-w-full" />
+        </div>
+        <div className="flex items-center justify-center bg-white w-full h-[195px] shadow-md rounded-lg">
+          <img src="nukkad.png" alt="nukkad" className="h-auto max-w-full" />
+        </div>
+        <div className="flex items-center justify-center  w-full h-[195px] shadow-md rounded-lg">
+          <img src="universal.png" alt="universal-university" className="h-auto max-w-full" />
+        </div>
+        <div className="flex items-center justify-center  w-full h-[195px] shadow-md rounded-lg">
+          <img src="badr.png" alt="badr" className="h-auto max-w-full" />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Story
+export default Partners;
