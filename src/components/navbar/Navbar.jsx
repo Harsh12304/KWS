@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { IoSearchSharp } from "react-icons/io5";
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,17 +18,20 @@ const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-blue-500 shadow-md">
             <div className="container mx-auto flex items-center justify-between px-5 py-3">
-                {/* Logo Section */}
-                <div className="logo">
-                    <a href="/home">
-                        <img src="/kws-logo.png" alt="Logo" className="h-12" />
+                {/* Logo and Text Section */}
+                <div className="flex items-center gap-4">
+                    <a href="/">
+                        <img src="/kws-logo.png" alt="Logo" className="h-16 w-auto" /> {/* Increased logo size */}
                     </a>
+                    <span className="text-2xl font-bold text-blue-500">
+                        Kokan Welfare Society, Kuwait {/* Increased text size */}
+                    </span>
                 </div>
 
                 {/* Navigation Links */}
                 <ul className="flex gap-8 items-center list-none m-0 p-0">
                     <li className="relative cursor-pointer">
-                        <a href="/home" className="hover:text-blue-500">HOME</a>
+                        <a href="/" className="hover:text-blue-500">HOME</a>
                     </li>
                     <li
                         className="relative cursor-pointer"
@@ -113,24 +115,13 @@ const Navbar = () => {
                             </div>
                         )}
                     </li>
+                    <li className="relative cursor-pointer">
+                        <a href="/login" className="hover:text-blue-500">LOGIN</a>
+                    </li>
+                    <li className="relative cursor-pointer">
+                        <a href="/register" className="hover:text-blue-500">REGISTER</a>
+                    </li>
                 </ul>
-
-                {/* Search and Buttons */}
-                <div className="flex items-center gap-4">
-                    <IoSearchSharp size={20} className="cursor-pointer hover:text-blue-500" />
-                    <a
-                        href="/login"
-                        className="px-4 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-600"
-                    >
-                        LOGIN
-                    </a>
-                    <a
-                        href="/register"
-                        className="px-4 py-2 text-white bg-green-500 rounded-full hover:bg-green-600"
-                    >
-                        REGISTER
-                    </a>
-                </div>
             </div>
         </nav>
     );
