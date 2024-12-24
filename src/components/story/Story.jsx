@@ -2,7 +2,7 @@ import React from 'react'
 
 const Story = () => {
   return (
-    <div className=' relative w-full h-screen mt-5 '>
+    <div className=' bg-white relative w-full h-screen mt-5 '>
         <div className='  flex items-center justify-center   ' >
             <h1 className=' ml-10 mr-10 pl-10 pr-10 mb-5 text-[60px] leading-normal text-[#000] capitalize ' >Our Partners <br />
             <span className='text-[24px]   justify-between mt-0  '>Trusted Collaborative Allies</span></h1>
