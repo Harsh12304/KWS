@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 
 const Navbar = () => {
@@ -43,7 +44,7 @@ const Navbar = () => {
                             <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg">
                                 <ul className="list-none m-0 p-0">
                                     <li>
-                                        <a href="/about/who-we-are" className="block px-4 py-2 hover:bg-gray-100">
+                                        <a href="/about/who-we- are" className="block px-4 py-2 hover:bg-gray-100">
                                             Who We Are
                                         </a>
                                     </li>

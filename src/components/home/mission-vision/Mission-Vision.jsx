@@ -9,38 +9,38 @@ const MissionAndVision = () => {
 
       <div className="flex justify-center sm:justify-start gap-6 flex-wrap px-6 sm:pr-12">
         {/* Mission 1 */}
-        <div className="w-60 h-60">
+        <div className="w-62 h-60">
           <img
             className="w-full h-full object-cover"
-            src="/mission1.png" // Replace with the actual icon image path
+            src="/mission1.png" 
             alt="Mission 1 Icon"
           />
           
         </div>
 
         {/* Mission 2 */}
-        <div className="w-60 h-60">
+        <div className="w-62 h-60">
           <img
             className="w-full h-full object-cover"
-            src="/mission2.png" // Replace with the actual icon image path
+            src="/mission2.png" 
             alt="Mission 2 Icon"
           />
                   </div>
 
         {/* Mission 3 */}
-        <div className="w-60 h-60">
+        <div className="w-62 h-60">
           <img
             className="w-full h-full object-cover"
-            src="/mission3.png" // Replace with the actual icon image path
+            src="/mission3.png" 
             alt="Mission 3 Icon"
           />
                   </div>
 
         {/* Mission 4 */}
-        <div className="w-60 h-60">
+        <div className="w-62 h-60  ">
           <img
             className="w-full h-full object-cover"
-            src="/mission3.png" // Replace with the actual icon image path
+            src="./mission4.png" 
             alt="Mission 4 Icon"
           />
                   </div>
