@@ -6,7 +6,7 @@ import Partners from "@/components/home/partners/Partners";
 import Footer from "@/components/layouts/footer/Footer";
 import Story from "@/components/home/story/Story";
 import Team from "@/components/team/Team";
-import Mission from "@/components/home/mission-vision/Mission-Vision";
+import Mission from "@/components/home/vision-mission/Vision-Mission";
 
 
 
