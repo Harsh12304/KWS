@@ -31,7 +31,7 @@ const VideoGallery = () => {
   ];
 
   return (
-    <div className="w-full pt-28 py-10 px-5 bg-[#DDFFBC]">
+    <div className="w-full pt-28 py-10 px-5 bg-[#fffffff]">
       {/* Section Title */}
       <h1 className="text-4xl font-bold text-center animate__animated animate__fadeIn" style={{ color: '#5444CB' }}>
         VIDEO GALLERY
@@ -39,39 +39,14 @@ const VideoGallery = () => {
 
       {/* Video Grid Section */}
       <div className="mt-8 space-y-8">
-        {/* First Row */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {videos.slice(0, 3).map((video, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {videos.map((video, index) => (
             <a
               key={index}
               href={video.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-4 bg-white border border-gray-300 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-80 md:w-96 lg:w-1/3 xl:w-1/5 animate__animated animate__fadeIn animate__delay-1s"
-            >
-              <div className="w-full h-48 bg-white flex items-center justify-center rounded overflow-hidden">
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-700 mt-4 text-center">
-                {video.title}
-              </p>
-            </a>
-          ))}
-        </div>
-
-        {/* Second Row */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {videos.slice(3).map((video, index) => (
-            <a
-              key={index}
-              href={video.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center p-4 bg-white border border-gray-300 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-80 md:w-96 lg:w-1/3 xl:w-1/5 animate__animated animate__fadeIn animate__delay-1s"
+              className="flex flex-col items-center p-4 bg-white border border-gray-300 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl w-full animate__animated animate__fadeIn animate__delay-1s"
             >
               <div className="w-full h-48 bg-white flex items-center justify-center rounded overflow-hidden">
                 <img

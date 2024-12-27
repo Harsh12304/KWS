@@ -1,41 +1,50 @@
-import React from 'react';
+import { FaInstagram, FaFacebook, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black p-10 flex flex-col items-center justify-center shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
-      <div className="flex justify-between items-center w-full max-w-7xl flex-wrap">
-        {/* Logo Section - Left Aligned */}
-        <div className="flex-1 flex flex-col items-center">
-          <img src="/kws-logo.png" alt="Logo" className="h-52" />
-          <p className="text-center text-sm mt-4 max-w-md">
+    <footer className="bg-white text-black py-10 px-5 flex flex-col items-center justify-center shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+      <div className="w-full max-w-7xl flex flex-wrap justify-between items-start gap-8">
+        {/* Logo Section */}
+        <div className="flex-1 text-center sm:text-left">
+          <img src="/kws-logo.png" alt="Logo" className="h-32 mx-auto sm:mx-0" />
+          <p className="text-sm mt-4 max-w-md mx-auto sm:mx-0">
             To foster unity among the Kokani community in Kuwait, promote brotherhood, and encourage education and economic growth, creating a harmonious and impactful society.
           </p>
         </div>
 
-        {/* Address Section - Centered in the Footer */}
+        {/* Address Section */}
         <div className="flex-1 text-center">
           <h3 className="text-lg font-semibold mb-2">Address</h3>
           <p className="text-base">Basement of Building no.6,</p>
           <p className="text-base">Al Qatami St.,</p>
           <p className="text-base">Block 10, Salmiya, Kuwait</p>
-          {/* Postal Address */}
           <h3 className="text-lg font-semibold mt-4 mb-2">Postal Address</h3>
           <p className="text-base">Post Office Box: 636, Dasman 15457, Kuwait</p>
         </div>
 
-        {/* Social Media Section - Right Aligned */}
-        <div className="flex-1 text-right">
+        {/* Social Media Section */}
+        <div className="flex-1 text-center sm:text-right">
           <h3 className="text-lg font-semibold mb-2">Let’s Socialize</h3>
-          <div className="flex justify-end gap-2.5 mb-4">
-            <a href="#" className="block"><img src="/instagram.jpg" alt="Instagram" className="h-10 w-10" /></a>
-            <a href="#" className="block"><img src="/facebook.jpg" alt="Facebook" className="h-10 w-10" /></a>
-            <a href="#" className="block"><img src="/twitter.jpg" alt="Twitter" className="h-10 w-10" /></a>
-            <a href="#" className="block"><img src="/linkedin.jpg" alt="LinkedIn" className="h-10 w-10" /></a>
+          <div className="flex justify-center sm:justify-end gap-4 mb-4 text-2xl">
+            <a href="https://www.instagram.com/kwskwt/" className="block text-pink-600 hover:text-pink-800">
+              <FaInstagram />
+            </a>
+            <a href="https://www.facebook.com/kokanwelfaresociety/" className="block text-blue-600 hover:text-blue-800">
+              <FaFacebook />
+            </a>
+            <a href="https://www.youtube.com/@kokanwelfaresocietykuwait3579/featured" className="block text-red-600 hover:text-red-800">
+              <FaYoutube />
+            </a>
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fkwskuwait" className="block text-blue-400 hover:text-blue-600">
+              <FaTwitter />
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile/" className="block text-blue-700 hover:text-blue-900">
+              <FaLinkedin />
+            </a>
           </div>
-          {/* Email Notification Section */}
           <h3 className="text-lg font-semibold mb-2">Get Notified</h3>
-          <p className="text-base mb-4">Enter your email to get notified about our new solutions:</p>
-          <form className="flex justify-end">
+          <p className="text-base mb-4">Enter your email to get notified for our new solutions:</p>
+          <form className="flex justify-center sm:justify-end">
             <input
               type="email"
               placeholder="Your email address"

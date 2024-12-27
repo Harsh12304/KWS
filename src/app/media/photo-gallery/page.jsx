@@ -2,7 +2,8 @@
 import React from 'react';
 import Navbar from '@/components/layouts/navbar/Navbar';
 import PhotoGallery from '@/components/media/photo/photo';
-import Footer from '@/components/layouts/footer/footer';
+import VideoGallery from '@/components/media/video/video';
+import Footer from '@/components/layouts/footer/Footer';
 
 
 
@@ -15,6 +16,7 @@ function page() {
       <>
         <Navbar/>
         <PhotoGallery/>
+        <VideoGallery/>
         <Footer/>
 
    

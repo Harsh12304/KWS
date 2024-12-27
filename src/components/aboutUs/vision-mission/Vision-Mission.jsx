@@ -4,13 +4,13 @@ const VisionMission = () => {
   return (
     <div className="w-full min-h-screen mt-[120px]">
       {/* Vision Image */}
-      <div className="image w-full h-10 flex items-center justify-center mb-[120px]">
-        <img src="/vision.png" alt="vision" />
+      <div className="image w-full h-15 flex items-center justify-center mb-[120px]">
+        <img src="/image.png" alt="vision" />
       </div>
 
       {/* Vision Statement */}
       <div className="flex items-center justify-center ml-[10vw] mr-[10vw] mb-[80px]">
-        <p className="text-2xl text-center">
+        <p className="text-2xl text-center ">
           To bring cohesive understanding among Kokani community living in Kuwait, promote 
           brotherhood and enlighten them about education and economic development thereby 
           create a happy community which would play an important role in humanity development.
