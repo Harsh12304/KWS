@@ -5,7 +5,7 @@ import Hero from "@/components/home/hero/Hero";
 import Partners from "@/components/home/partners/Partners";
 import Footer from "@/components/layouts/footer/Footer";
 import Story from "@/components/home/story/Story";
-import Team from "@/components/team/Team";
+import Team from "@/components/home/team/Team";
 import Mission from "@/components/home/vision-mission/Vision-Mission";
 
 
