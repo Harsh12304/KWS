@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import Navbar from '@/components/navbar/Navbar';
+import Navbar from '@/components/layouts/navbar/Navbar';
 import PresidentMessage from '@/components/president-message/president-message';
 import Footer from '@/components/footer/footer';
 
