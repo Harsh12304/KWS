@@ -1,5 +1,5 @@
 import React from 'react';
-
+// hello
 const Hero = () => {
   return (
     <div className="relative w-full h-screen">
@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="absolute bottom-[8%] left-1/2 transform -translate-x-1/2 z-10 text-white text-center">
           <h1 className="text-3xl md:text-5xl font-bold uppercase">
             Kokan Welfare Society
-          </h1>
+          </h1><hr className=' ' />
         </div>
 
         <div className="absolute bottom-[2%] left-1/2 transform -translate-x-1/2 z-10 text-white text-center">
