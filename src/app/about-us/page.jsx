@@ -10,6 +10,7 @@ const page = () => {
         <Navbar />
         <AboutHero />
         <AbouDropdown />
+        <Footer/>
         
     </div>
   )
