@@ -23,7 +23,7 @@ const Story = () => {
       {/* Text Section */}
       <div className="flex flex-col items-center sm:items-start flex-1 mt-6 sm:mt-0 px-4">
         {/* Enlarged Green Box */}
-        <div className="w-full max-w-[90%] sm:max-w-[720px] h-auto bg-[#67B291] flex flex-col items-center justify-center px-6 md:px-12 py-8 sm:py-10 relative shadow-md">
+        <motion.div className="w-full max-w-[90%] sm:max-w-[720px] h-auto bg-[#67B291] flex flex-col items-center justify-center px-6 md:px-12 py-8 sm:py-10 relative shadow-md">
           <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center relative">
             <span className="text-[#000]">About</span> Our Story
           </h2>

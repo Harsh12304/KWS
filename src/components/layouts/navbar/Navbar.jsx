@@ -1,11 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation'; // For detecting active route
-=======
-import React, { useState } from 'react';
-import { FaCaretDown } from 'react-icons/fa';
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
 
 const Navbar = () => {
     const pathname = usePathname(); // Get current route
@@ -109,16 +104,11 @@ const Navbar = () => {
                         ref={aboutDropdownRef}
                         className={`relative cursor-pointer ${isActive('/about') ? 'text-blue-500' : ''}`}
                     >
-<<<<<<< HEAD
                         <span
                             onClick={() => toggleDropdown(setAboutDropdownOpen, aboutDropdownOpen)}
                             className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
                         >
                             ABOUT US
-=======
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0 flex items-center gap-1">
-                            ABOUT US <FaCaretDown />
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
                         </span>
                         {aboutDropdownOpen && (
                             <div className="absolute left-0 mt-2 bg-white border border-gray-300 shadow-lg w-48 sm:w-56 z-10">
@@ -179,16 +169,11 @@ const Navbar = () => {
                         ref={dropdownRef}
                         className={`relative cursor-pointer ${isActive('/downloads') ? 'text-blue-500' : ''}`}
                     >
-<<<<<<< HEAD
                         <span
                             onClick={() => toggleDropdown(setDropdownOpen, dropdownOpen)}
                             className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
                         >
                             DOWNLOAD
-=======
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0 flex items-center gap-1">
-                            DOWNLOAD <FaCaretDown />
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
                         </span>
                         {dropdownOpen && (
                             <div className="absolute left-0 mt-2 bg-white border border-gray-300 shadow-lg w-48 sm:w-56 z-10">
@@ -217,16 +202,11 @@ const Navbar = () => {
                         ref={mediaDropdownRef}
                         className={`relative cursor-pointer ${isActive('/media') ? 'text-blue-500' : ''}`}
                     >
-<<<<<<< HEAD
                         <span
                             onClick={() => toggleDropdown(setMediaDropdownOpen, mediaDropdownOpen)}
                             className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
                         >
                             MEDIA
-=======
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0 flex items-center gap-1">
-                            MEDIA <FaCaretDown />
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
                         </span>
                         {mediaDropdownOpen && (
                             <div className="absolute left-0 mt-2 bg-white border border-gray-300 shadow-lg w-48 sm:w-56 z-10">

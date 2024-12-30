@@ -23,17 +23,9 @@ const Hero = () => {
         >
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold uppercase">
             Kokan Welfare Society
-<<<<<<< HEAD
-          </h1><hr className=' mt-4 border-[2px]  ' />
-        </div>
-
-        <div className="absolute bottom-[2%] left-1/2 transform -translate-x-1/2 z-10 text-white text-center">
-          <p className="text-sm md:text-base font-bold uppercase">
-=======
           </h1>
           <hr className="w-3/4 sm:w-1/2 mx-auto border-t-2 border-white mt-2" />
           <p className="mt-4 text-xs sm:text-sm md:text-base font-bold uppercase">
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
             Together we will Rebuild our Future
           </p>
         </motion.div>

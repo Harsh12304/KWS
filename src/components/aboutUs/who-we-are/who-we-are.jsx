@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Link from 'next/link'; // Import Link for navigation
-=======
-import Link from 'next/link';
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -17,9 +13,6 @@ const Story = () => {
     <div>
       <div>
         {/* First Component */}
-<<<<<<< HEAD
-        <div  className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4">
-=======
         <motion.div
           className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4"
           initial={{ opacity: 0, y: 50 }}
@@ -27,7 +20,6 @@ const Story = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
           {/* Image Section */}
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <motion.img
@@ -56,11 +48,6 @@ const Story = () => {
         <br />
 
         {/* Second Component */}
-<<<<<<< HEAD
-        <div 
-         className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4">
-          {/* Image Section (Now on Left) */}
-=======
         <motion.div
           className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4"
           initial={{ opacity: 0, x: -50 }}
@@ -68,7 +55,6 @@ const Story = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <motion.img
               className="mt-10 sm:mt-28 sm:ml-10 w-auto max-w-[90%] sm:max-w-none object-contain"
@@ -94,10 +80,6 @@ const Story = () => {
         <br />
 
         {/* Third Component */}
-<<<<<<< HEAD
-        <div  className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4">
-          {/* Image Section */}
-=======
         <motion.div
           className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4"
           initial={{ opacity: 0, y: 50 }}
@@ -105,7 +87,6 @@ const Story = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <motion.img
               className="mt-10 sm:mt-28 sm:ml-10 w-auto max-w-[90%] sm:max-w-none object-contain"
@@ -131,10 +112,6 @@ const Story = () => {
         <br />
 
         {/* Fourth Component */}
-<<<<<<< HEAD
-        <div  className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4">
-          {/* Image Section (Now on Left) */}
-=======
         <motion.div
           className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4"
           initial={{ opacity: 0, x: 50 }}
@@ -142,7 +119,6 @@ const Story = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <motion.img
               className="mt-10 sm:mt-28 sm:ml-10 w-auto max-w-[90%] sm:max-w-none object-contain"
@@ -168,7 +144,6 @@ const Story = () => {
         <br />
 
         {/* Bottom Text & Button Section */}
-<<<<<<< HEAD
         <div className="relative w-full h-[250px] mt-12 bg-[#478168]">
   <div className="relative w-full h-full">
     {/* Background Image */}
@@ -202,40 +177,6 @@ const Story = () => {
 </div>
 
 
-=======
-        <motion.div
-          className="relative w-full h-[171px] mt-[120px]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative w-full h-full">
-            <img
-              src="/texture.png"
-              className="absolute inset-0 w-full h-full object-cover z-0"
-              alt="texture"
-            />
-
-            <div className="absolute top-1 ml-[250px] transform -translate-x-1/2 z-10 text-white leading-3 mt-5">
-              <h3 className="text-3xl md:text-5xl font-thin,bold">Be the change</h3>
-              <br />
-              <p>Join us as a volunteer and make a lasting impact today!</p>
-              <br />
-              <p>impact today!</p>
-            </div>
-
-            <div className="absolute right-10 top-1/2 transform -translate-y-1/2 flex items-center gap-2">
-              <Link
-                href="#"
-                className="h-12 w-40 bg-white text-[#478168] py-2 flex items-center justify-center border-2 hover:bg-[#478168] hover:text-white transition-all duration-300"
-              >
-                Volunteer now
-              </Link>
-            </div>
-          </div>
-        </motion.div>
->>>>>>> 31e9d3150d0d126f678406c5bc709258b736120e
       </div>
     </div>
   );
