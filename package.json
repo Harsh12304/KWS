@@ -10,15 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@react-pdf-viewer/core": "^3.12.0",
     "framer-motion": "^11.15.0",
     "next": "15.1.2",
-    "pdfjs-dist": "^4.9.155",
-=======
-    "framer-motion": "^11.15.0",
-    "next": "15.1.2",
->>>>>>> 34ab2b589b0402ff76eb509a48645bb0a48a47c2
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-flip-page": "^1.6.4",

@@ -1,21 +1,33 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const PresidentMessage = () => {
   return (
-    <div className="w-full py-10 px-5 bg-[#DDFFBC]">
+    <div className="w-full py-10 px-5 bg-white">
       {/* Spacer for Navbar */}
       <div className="h-20"></div>
 
       {/* Section Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-[#5444CB] mb-8 md:mb-12 underline">
+      <motion.h1
+        className="text-4xl md:text-5xl font-bold text-center text-[#5444CB] mb-8 md:mb-12 underline"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         President's Message
-      </h1>
+      </motion.h1>
 
       {/* Content Section */}
       <div className="flex flex-col items-center gap-8 md:gap-12">
         {/* Image and Name Section */}
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full justify-center">
+        <motion.div
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full justify-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           {/* Image Section */}
           <div className="flex-shrink-0">
             <img
@@ -34,17 +46,29 @@ const PresidentMessage = () => {
               President, Kokan Welfare Society, Kuwait
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Assalamu Alaikum Section */}
-        <div className="text-center w-full">
+        <motion.div
+          className="text-center w-full"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <p className="text-xl md:text-2xl font-bold text-gray-800 italic mb-4 md:mb-6">
             Assalamu Alaikum
           </p>
-        </div>
+        </motion.div>
 
         {/* Speech Section */}
-        <div className="w-full bg-white p-6 md:p-8 rounded-lg shadow-lg">
+        <motion.div
+          className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 p-6 md:p-8 rounded-lg shadow-2xl border border-gray-200"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           <p className="text-gray-700 leading-relaxed font-serif mb-4 md:mb-6">
             As president of the Kokan Welfare Society Kuwait, I would like to extend my sincerest gratitude to our members and supporters for their ongoing dedication to our mission. Over the last eleven years, Kokan Welfare Society, Kuwait (KWS) has become the sole representative of the Kokani community in Kuwait and I am proud to be a part of it. KWS is committed to improving the lives of those in need, and we could not do it without the generosity and support of our community.
           </p>
@@ -66,7 +90,7 @@ const PresidentMessage = () => {
           <p className="text-gray-700 leading-relaxed font-serif">
             May Allah bless us all with prosperity, good health, and a peaceful life.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { FaCaretDown } from 'react-icons/fa';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -55,7 +56,7 @@ const Navbar = () => {
                 <ul
                     className={`${
                         mobileMenuOpen ? 'block' : 'hidden'
-                    } sm:flex gap-8 items-center list-none m-0 p-0 w-full sm:w-auto sm:static absolute top-full left-0 bg-white sm:bg-transparent shadow-md sm:shadow-none`}
+                    } sm:flex flex-col sm:flex-row gap-4 sm:gap-8 items-center list-none m-0 p-0 w-full sm:w-auto sm:static absolute top-full left-0 bg-white sm:bg-transparent shadow-md sm:shadow-none`}
                 >
                     <li className="relative cursor-pointer">
                         <a href="/" className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
@@ -67,8 +68,8 @@ const Navbar = () => {
                         onMouseEnter={() => handleMouseEnter(setAboutDropdownOpen)}
                         onMouseLeave={() => handleMouseLeave(setAboutDropdownOpen)}
                     >
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
-                            ABOUT US
+                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0 flex items-center gap-1">
+                            ABOUT US <FaCaretDown />
                         </span>
                         {aboutDropdownOpen && (
                             <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg w-48">
@@ -102,8 +103,8 @@ const Navbar = () => {
                         onMouseEnter={() => handleMouseEnter(setDropdownOpen)}
                         onMouseLeave={() => handleMouseLeave(setDropdownOpen)}
                     >
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
-                            DOWNLOAD
+                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0 flex items-center gap-1">
+                            DOWNLOAD <FaCaretDown />
                         </span>
                         {dropdownOpen && (
                             <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg w-48">
@@ -132,8 +133,8 @@ const Navbar = () => {
                         onMouseEnter={() => handleMouseEnter(setMediaDropdownOpen)}
                         onMouseLeave={() => handleMouseLeave(setMediaDropdownOpen)}
                     >
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
-                            MEDIA
+                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0 flex items-center gap-1">
+                            MEDIA <FaCaretDown />
                         </span>
                         {mediaDropdownOpen && (
                             <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg w-48">

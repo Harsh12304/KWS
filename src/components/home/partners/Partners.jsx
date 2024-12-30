@@ -12,7 +12,6 @@ const brandsData = [
   { id: 5, image: "/nukkad.png", name: "nukkad" },
   { id: 6, image: "/universal.png", name: "universal" },
   { id: 7, image: "/badr.png", name: "badr" },
-  
 ];
 
 const Brands = () => {
@@ -34,11 +33,10 @@ const Brands = () => {
   }, []);
 
   return (
-    
     <section className="pt-12 overflow-hidden ">
       <div className="container mx-auto px-4 mb-16 ">
         {/* Heading Section */}
-          <div className="text-center mb-10 bg-[#67B291] w-full h-[20vh]  ">
+        <div className="text-center mb-10 bg-[#67B291] w-full h-[20vh] flex flex-col items-center justify-center">
           <h1 className="text-[36px] md:text-[48px] font-bold text-[#000]">
             Our Partners
           </h1>
@@ -83,17 +81,3 @@ const SingleBrand = ({ brand }) => {
     </div>
   );
 };
-
-
-{/* <div className="relative w-full min-h-screen bg-[#dce8df] flex flex-col items-center justify-center px-0  ">
-
-      
-      <div className="text-center mb-10 bg-[#67B291] w-full h-[20vh]  ">
-        <h1 className="text-[36px] md:text-[48px] font-bold text-[#000]">
-          Our Partners
-        </h1>
-        <p className="text-[16px] md:text-[20px] text-white leading-[1.5]">
-          Trusted Collaborative Allies
-        </p>
-      </div>
-</div> */}
