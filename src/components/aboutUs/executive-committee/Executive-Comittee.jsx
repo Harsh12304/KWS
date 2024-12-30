@@ -69,8 +69,8 @@ const ExecutiveCommittee = () => {
         {
           title: "Introducing Our Esteemed Team",
           members: [
-            { name: "Mr. Aslam Thakur", title: "President", image: "/001.png" },
             { name: "Mr. Muft Hamza Mujawar", title: "Vice President", image: "/003.png" },
+            { name: "Mr. Aslam Thakur", title: "President", image: "/001.png" },
             { name: "Mr. Labib Abbas Fakih", title: "Vice President", image: "/005.png" },
             { name: "Mr. Faisal Mohammed Kasim Jogilkar", title: "Joint General Secretary", image: "/008.png" },
             { name: "Mr. Parvez Hussain Wadekar", title: "General Secretary", image: "/004.png" },
