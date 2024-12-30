@@ -166,15 +166,15 @@ const ExecutiveCommittee = () => {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-[80px] h-[100px] border-white"
+                        className="w-[80px] h-[100px] border-white   "
                       />
                     </div>
 
                     {/* Member Info */}
-                    <div className="flex flex-col items-center justify-center py-1">
-                      <h3 className="text-lg font-semibold">{member.name}</h3>
-                      <p className="text-sm">{member.title}</p>
-                    </div>
+                    <div className="flex flex-col items-center justify-center text-center py-1">
+                        <h3 className="text-lg font-semibold break-words">{member.name}</h3>
+                        <p className="text-sm">{member.title}</p>
+                      </div>
                   </div>
                 ))}
               </div>

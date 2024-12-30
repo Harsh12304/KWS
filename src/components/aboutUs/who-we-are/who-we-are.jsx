@@ -1,12 +1,18 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import Link from 'next/link'; // Import Link for navigation
 import React from 'react';
 
 const Story = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <div>
       <div >
         {/* First Component */}
-        <div className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4">
+        <div  className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4">
           {/* Image Section */}
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <img
@@ -36,7 +42,8 @@ const Story = () => {
         <br />
 
         {/* Second Component */}
-        <div className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4">
+        <div 
+         className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4">
           {/* Image Section (Now on Left) */}
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <img
@@ -66,7 +73,7 @@ const Story = () => {
         <br />
 
         {/* Third Component */}
-        <div className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4">
+        <div  className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 flex flex-col sm:flex-row p-4">
           {/* Image Section */}
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <img
@@ -96,7 +103,7 @@ const Story = () => {
         <br />
 
         {/* Fourth Component */}
-        <div className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4">
+        <div  className="relative w-full sm:w-[1244px] h-auto sm:h-[523px] bg-[#B8E1C2] top-6 ml-auto flex flex-col sm:flex-row-reverse p-4">
           {/* Image Section (Now on Left) */}
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <img
@@ -126,34 +133,39 @@ const Story = () => {
         <br />
 
         {/* Bottom Text & Button Section */}
-        <div className="relative w-full h-[171px] mt-[120px]"> {/* Add the margin bottom here */}
-          <div className="relative w-full h-full">
-            <img
-              src="/texture.png"
-              className="absolute inset-0 w-full h-full object-cover z-0"
-              alt="texture"
-            />
+        <div className="relative w-full h-[250px] mt-12 bg-[#478168]">
+  <div className="relative w-full h-full">
+    {/* Background Image */}
+    <img
+      src="/texture.png"
+      className="absolute inset-0 w-full h-full object-cover z-0"
+      alt="texture"
+    />
 
-            {/* Text Section */}
-            <div className="absolute top-1 ml-[250px] transform -translate-x-1/2 z-10 text-white leading-3 mt-5">
-              <h3 className="text-3xl md:text-5xl font-thin,bold">Be the change</h3>
-              <br />
-              <p>Join us as a volunteer and make a lasting impact today!</p>
-              <br />
-              <p>impact today!</p>
-            </div>
+    {/* Text Section */}
+    <div className="relative z-10 text-white p-8 md:p-12 lg:p-20">
+      <h3 className="text-xl md:text-3xl lg:text-5xl font-bold">
+        Be the change
+      </h3>
+      <p className="text-sm md:text-base lg:text-lg mt-4">
+        Join us as a volunteer and make a lasting impact today!
+      </p>
+      <p className="text-sm md:text-base lg:text-lg mt-2">Impact today!</p>
+    </div>
 
-            {/* Button Section */}
-            <div className="absolute right-10 top-1/2 transform -translate-y-1/2 flex items-center gap-2">
-              <Link
-                href="#"
-                className="h-12 w-40 bg-white text-[#478168] py-2 flex items-center justify-center border-2"
-              >
-                Volunteer now
-              </Link>
-            </div>
-          </div>
-        </div>
+    {/* Button Section */}
+    <div className="absolute bottom-6 right-6 md:right-12 lg:right-20 flex items-center">
+      <button
+        
+        className="h-10 w-32 md:h-12 md:w-40 bg-white text-[#478168] py-2 px-4 flex items-center justify-center border-2 rounded-lg text-sm md:text-base lg:text-lg font-medium shadow-md hover:shadow-lg hover:bg-gray-100 transition"
+      >
+        Volunteer now
+      </button>
+    </div>
+  </div>
+</div>
+
+
       </div>
     </div>
   );

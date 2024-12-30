@@ -46,7 +46,7 @@ const AGM2023 = () => {
   ];
 
   return (
-    <div className="w-full px-4 py-16 bg-gray-100">
+    <div className="w-full px-4 py-16 bg-gray-100 mt-10 ">
       {/* AGM Heading */}
       <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-[#5444CB]">AGM-2023</h1>
 

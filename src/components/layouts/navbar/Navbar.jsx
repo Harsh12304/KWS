@@ -1,21 +1,56 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation'; // For detecting active route
 
 const Navbar = () => {
+    const pathname = usePathname(); // Get current route
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
     const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [hoverTimeout, setHoverTimeout] = useState(null);
 
-    const handleMouseEnter = (setState) => {
-        clearTimeout(hoverTimeout);
-        setState(true);
+    // Refs to track dropdown elements
+    const dropdownRef = useRef(null);
+    const mediaDropdownRef = useRef(null);
+    const aboutDropdownRef = useRef(null);
+
+    const toggleDropdown = (setState, currentState) => {
+        setState(!currentState);
     };
 
-    const handleMouseLeave = (setState) => {
-        setHoverTimeout(setTimeout(() => setState(false), 100));
+    // Helper function to determine if the path is under a specific section
+    const isActive = (section) => {
+        return pathname.includes(section) ? 'text-blue-500' : '';
     };
+
+    // Close dropdowns when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target)
+            ) {
+                setDropdownOpen(false);
+            }
+            if (
+                mediaDropdownRef.current &&
+                !mediaDropdownRef.current.contains(event.target)
+            ) {
+                setMediaDropdownOpen(false);
+            }
+            if (
+                aboutDropdownRef.current &&
+                !aboutDropdownRef.current.contains(event.target)
+            ) {
+                setAboutDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-blue-500 shadow-md">
@@ -57,40 +92,73 @@ const Navbar = () => {
                         mobileMenuOpen ? 'block' : 'hidden'
                     } sm:flex gap-8 items-center list-none m-0 p-0 w-full sm:w-auto sm:static absolute top-full left-0 bg-white sm:bg-transparent shadow-md sm:shadow-none`}
                 >
-                    <li className="relative cursor-pointer">
-                        <a href="/" className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
+                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-blue-500' : ''}`}>
+                        <a
+                            href="/"
+                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                        >
                             HOME
                         </a>
                     </li>
                     <li
-                        className="relative cursor-pointer"
-                        onMouseEnter={() => handleMouseEnter(setAboutDropdownOpen)}
-                        onMouseLeave={() => handleMouseLeave(setAboutDropdownOpen)}
+                        ref={aboutDropdownRef}
+                        className={`relative cursor-pointer ${isActive('/about') ? 'text-blue-500' : ''}`}
                     >
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
+                        <span
+                            onClick={() => toggleDropdown(setAboutDropdownOpen, aboutDropdownOpen)}
+                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                        >
                             ABOUT US
                         </span>
                         {aboutDropdownOpen && (
-                            <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg w-48">
+                            <div className="absolute left-0 mt-2 bg-white border border-gray-300 shadow-lg w-48 sm:w-56 z-10">
                                 <ul className="list-none m-0 p-0">
                                     <li>
-                                        <a href="/about/who-we-are" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                                        <a
+                                            href="/about/who-we-are"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
                                             Who We Are
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/about/president-message" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                                        <a
+                                            href="/about/president-message"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
                                             President's Message
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/about/vision-mission" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
-                                            Our Vision Mission
+                                        <a
+                                            href="/about/vision-mission"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
+                                            Our Vision & Mission
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/about/executive-committee" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                                        <a
+                                            href="/about/executive-committee"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
                                             Executive Committee
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/about/volunteer-committee"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
+                                            Volunteer Committee
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/about/coordination-committee"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
+                                            Coordination Committee
                                         </a>
                                     </li>
                                 </ul>
@@ -98,23 +166,31 @@ const Navbar = () => {
                         )}
                     </li>
                     <li
-                        className="relative cursor-pointer"
-                        onMouseEnter={() => handleMouseEnter(setDropdownOpen)}
-                        onMouseLeave={() => handleMouseLeave(setDropdownOpen)}
+                        ref={dropdownRef}
+                        className={`relative cursor-pointer ${isActive('/downloads') ? 'text-blue-500' : ''}`}
                     >
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
+                        <span
+                            onClick={() => toggleDropdown(setDropdownOpen, dropdownOpen)}
+                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                        >
                             DOWNLOAD
                         </span>
                         {dropdownOpen && (
-                            <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg w-48">
+                            <div className="absolute left-0 mt-2 bg-white border border-gray-300 shadow-lg w-48 sm:w-56 z-10">
                                 <ul className="list-none m-0 p-0">
                                     <li>
-                                        <a href="/downloads/souvenirs" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                                        <a
+                                            href="/downloads/souvenirs"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
                                             Souvenirs
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/downloads/mela" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                                        <a
+                                            href="/downloads/mela"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
                                             Kokan Mela
                                         </a>
                                     </li>
@@ -122,29 +198,32 @@ const Navbar = () => {
                             </div>
                         )}
                     </li>
-                    <li className="relative cursor-pointer">
-                        <a href="/contact" className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
-                            CONTACT US
-                        </a>
-                    </li>
                     <li
-                        className="relative cursor-pointer"
-                        onMouseEnter={() => handleMouseEnter(setMediaDropdownOpen)}
-                        onMouseLeave={() => handleMouseLeave(setMediaDropdownOpen)}
+                        ref={mediaDropdownRef}
+                        className={`relative cursor-pointer ${isActive('/media') ? 'text-blue-500' : ''}`}
                     >
-                        <span className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
+                        <span
+                            onClick={() => toggleDropdown(setMediaDropdownOpen, mediaDropdownOpen)}
+                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                        >
                             MEDIA
                         </span>
                         {mediaDropdownOpen && (
-                            <div className="absolute left-0 mt-1 bg-white border border-gray-300 shadow-lg w-48">
+                            <div className="absolute left-0 mt-2 bg-white border border-gray-300 shadow-lg w-48 sm:w-56 z-10">
                                 <ul className="list-none m-0 p-0">
                                     <li>
-                                        <a href="/media/photo-gallery" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                                        <a
+                                            href="/media/photo-gallery"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
                                             Photo Gallery
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/media/video-gallery" className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                                        <a
+                                            href="/media/video-gallery"
+                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        >
                                             Video Gallery
                                         </a>
                                     </li>
@@ -152,14 +231,28 @@ const Navbar = () => {
                             </div>
                         )}
                     </li>
-                    <li className="relative cursor-pointer">
-                        <a href="/login" className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
-                            LOGIN
+                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-blue-500' : ''}`}>
+                        <a
+                            href="/contact"
+                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                        >
+                            CONTACT US
                         </a>
                     </li>
-                    <li className="relative cursor-pointer">
-                        <a href="/register" className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0">
+                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-blue-500' : ''}`}>
+                        <a
+                            href="/contact"
+                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                        >
                             REGISTER
+                        </a>
+                    </li>
+                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-blue-500' : ''}`}>
+                        <a
+                            href="/#"
+                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                        >
+                            LOGIN
                         </a>
                     </li>
                 </ul>

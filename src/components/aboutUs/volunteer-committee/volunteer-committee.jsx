@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const VolunteerCommittee = () => {
+const CoordinationCommittee = () => {
   const [selectedYear, setSelectedYear] = useState("2023");
 
   const teamData = {
@@ -8,29 +8,15 @@ const VolunteerCommittee = () => {
     "2019": { sections: [] }, // Add data for 2019 if available
     "2020": { sections: [] }, // Add data for 2020 if available
     "2021": { sections: [] }, // Add data for 2021 if available
-    "2022": {
-      sections: [
-        {
-          title: "Coming Soon",
-          members: [],
-        },
-      ],
-    },
-    "2023": {
-      sections: [
-        {
-          title: "Coming Soon",
-          members: [],
-        },
-      ],
-    },
+    "2022": { sections: [] }, // Add data for 2022 if available
+    "2023": { sections: [] }, // Add data for 2023 if available
   };
 
   return (
     <div className="w-full min-h-screen mt-[50px]">
       {/* Header */}
       <div className="flex items-center justify-center mb-7">
-        <h1 className="text-2xl font-semibold capitalize">Executive Committee</h1>
+        <h1 className="text-2xl font-semibold capitalize">Volunteer Committee</h1>
       </div>
 
       {/* Year Buttons */}
@@ -60,12 +46,32 @@ const VolunteerCommittee = () => {
                 <h2 className="text-xl font-semibold capitalize">{section.title}</h2>
               </div>
 
-              {/* Placeholder for "Coming Soon" */}
-              {section.members.length === 0 && (
-                <div className="flex items-center justify-center bg-gray-200 border border-black w-full h-[200px] text-center">
-                  <p className="text-gray-500">Data for the year {selectedYear} is coming soon!</p>
-                </div>
-              )}
+              {/* Member Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+                {section.members.map((member, index) => (
+                  <div
+                    key={index}
+                    className="w-[250px] h-[160px] bg-[#548477] text-black relative transition-transform transform hover:scale-105 duration-300"
+                  >
+                    {/* Image */}
+                    <div
+                      className="relative w-full h-[100px] flex justify-center items-center -mt-5 top-[-20px]"
+                    >
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-[80px] h-[100px] border-white"
+                      />
+                    </div>
+
+                    {/* Member Info */}
+                    <div className="flex flex-col items-center justify-center py-1">
+                      <h3 className="text-lg font-semibold">{member.name}</h3>
+                      <p className="text-sm">{member.title}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           ))
         ) : (
@@ -79,4 +85,4 @@ const VolunteerCommittee = () => {
   );
 };
 
-export default VolunteerCommittee;
+export default CoordinationCommittee;

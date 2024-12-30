@@ -7,6 +7,7 @@ import Footer from "@/components/layouts/footer/Footer";
 import Story from "@/components/home/story/Story";
 import Team from "@/components/home/team/Team";
 import Mission from "@/components/home/vision-mission/Vision-Mission";
+import BackToTopButton from "@/components/layouts/backtotop/BackToTop";
 
 
 
@@ -20,6 +21,7 @@ function Page() {
         <Team />
         <Mission />
         <Footer />
+        <BackToTopButton />
     </div>
   )
 }

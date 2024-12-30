@@ -8,121 +8,15 @@ const CoordinationCommittee = () => {
     "2019": { sections: [] }, // Add data for 2019 if available
     "2020": { sections: [] }, // Add data for 2020 if available
     "2021": { sections: [] }, // Add data for 2021 if available
-    "2022": {
-      sections: [
-        {
-          title: "Introducing Our Esteemed Team",
-          members: [
-            { name: "Mr. Aslam Thakur", title: "President", image: "/001.png" },
-            { name: "Mr. Mohammed Shafi Alware", title: "Vice President", image: "/002.png" },
-            { name: "Mr. Muft Hamza Mujawar", title: "Vice President", image: "/003.png" },
-            { name: "Mr. Faisal Mohammed Kasim Jogilkar", title: "Joint General Secretary", image: "/008.png" },
-            { name: "Mr. Parvez Hussain Wadekar", title: "General Secretary", image: "/004.png" },
-            { name: "Dr. Rahmatullah Galsoorker", title: "Joint General Secretary", image: "/006.png" },
-
-            { name: "Mr. Amanullah Abbas Yelukar", title: "Joint General Secretary", image: "/009.png" },
-            { name: "Mr. Labib Abbas Fakih", title: "Treasurer", image: "/005.png" },
-            { name: "Mr. Anwar Ayyub Mhalukar", title: "Joint General Secretary", image: "/028.png" },
-
-          ],
-        },
-        {
-          title: "Executive Members",
-          members: [
-            { name: "Mr. Maulana Javed Karjikar", title: "Executive Member", image: "/012.png" },
-            { name: "Mr. Yaqub Abdul Latif Solkar", title: "Executive Member", image: "/010.png" },
-            { name: "Mr. Hasrat Murad Walile", title: "Executive Member", image: "/013.png" },
-            { name: "Mr. Kifayat Ali Giyasuddin Tisekar", title: "Executive Member", image: "/016.png" },
-            { name: "Mr. Mohammed Salim Kazi", title: "Executive Member", image: "/017.png" },
-            { name: "Mr. Ridwan Abdul Rahman Mullaji", title: "Executive Member", image: "/018.png" },
-            { name: "Mr. Nasar Jainuddin Parkar", title: "Executive Member", image: "/019.png" },
-            { name: "Mr. Mohamed Saeed Ali Mullaji", title: "Executive Member", image: "/020.png" },
-            { name: "Mr. Abrar Amanullah Shirshikar", title: "Executive Member", image: "/021.png" },
-            { name: "Mr. Atif Azim Khanzada", title: "Executive Member", image: "/014.png" },
-
-            { name: "Mr. Mansur Ibrahim Dalwai", title: "Executive Member", image: "/022.png" },
-            { name: "Mr. Hafiz Samiulla Abdulla Firfire", title: "Executive Member", image: "/023.png" },
-            { name: "Mr. Talib Ali Rumaney", title: "Joint Treasurer", image: "/015.png" },
-
-          ],
-        },
-        {
-          title: "Executive Members - Ladies Cell",
-          members: [
-            { name: "Ms. Ruksana Labib Fakih", title: "Executive Member", image: "/29.png" },
-            { name: "Mrs. Humera Parvez Wadekar", title: "Executive Member", image: "/29.png" },
-          ],
-        },
-        {
-          title: "Advisory Board",
-          members: [
-            { name: "Mr. Salim Umar Desai", title: "Ex-Officio President", image: "/024.png" },
-            { name: "Mr. Mohammed Saleh Burud", title: "Patron", image: "/025.png" },
-            { name: "Maulana Nisar Daroge", title: "Advisor", image: "/026.png" },
-            { name: "Dr. Abdul Razzak Rumane", title: "Advisor", image: "/027.png" },
-          ],
-        },
-      ],
-    },
-    "2023": {
-      sections: [
-        {
-          title: "Introducing Our Esteemed Team",
-          members: [
-            { name: "Mr. Aslam Thakur", title: "President", image: "/001.png" },
-            { name: "Mr. Muft Hamza Mujawar", title: "Vice President", image: "/003.png" },
-            { name: "Mr. Labib Abbas Fakih", title: "Vice President", image: "/005.png" },
-            { name: "Mr. Faisal Mohammed Kasim Jogilkar", title: "Joint General Secretary", image: "/008.png" },
-            { name: "Mr. Parvez Hussain Wadekar", title: "General Secretary", image: "/004.png" },
-            { name: "Mr. Amanullah Abbas Yelukar", title: "Joint General Secretary", image: "/009.png" },
-            { name: "Mr. Atif Azim Khanzada", title: "Joint Treasurer", image: "/014.png" },
-            { name: "Mr. Mohammed Shafi Alware", title: "Treasurer", image: "/002.png" },
-            { name: "Mr. Talib Ali Rumaney", title: "Joint Treasurer", image: "/015.png" },
-          ],
-        },
-        {
-          title: "Executive Members",
-          members: [
-            { name: "Dr. Rahmatullah Galsoorker", title: "Executive Member", image: "/006.png" },
-            { name: "Mr. Maulana Javed Karjikar", title: "Executive Member", image: "/012.png" },
-            { name: "Mr. Yaqub Abdul Latif Solkar", title: "Executive Member", image: "/010.png" },
-            { name: "Mr. Hasrat Murad Walile", title: "Executive Member", image: "/013.png" },
-            { name: "Mr. Anwar Ayyub Mhalukar", title: "Executive Member", image: "/028.png" },
-            { name: "Mr. Kifayat Ali Giyasuddin Tisekar", title: "Executive Member", image: "/016.png" },
-            { name: "Mr. Mohammed Salim Kazi", title: "Executive Member", image: "/017.png" },
-            { name: "Mr. Ridwan Abdul Rahman Mullaji", title: "Executive Member", image: "/018.png" },
-            { name: "Mr. Nasar Jainuddin Parkar", title: "Executive Member", image: "/019.png" },
-            { name: "Mr. Mohamed Saeed Ali Mullaji", title: "Executive Member", image: "/020.png" },
-            { name: "Mr. Abrar Amanullah Shirshikar", title: "Executive Member", image: "/021.png" },
-            { name: "Mr. Mansur Ibrahim Dalwai", title: "Executive Member", image: "/022.png" },
-            { name: "Mr. Hafiz Samiulla Abdulla Firfire", title: "Executive Member", image: "/023.png" },
-          ],
-        },
-        {
-          title: "Executive Members - Ladies Cell",
-          members: [
-            { name: "Ms. Ruksana Labib Fakih", title: "Executive Member", image: "/29.png" },
-            { name: "Mrs. Humera Parvez Wadekar", title: "Executive Member", image: "/29.png" },
-          ],
-        },
-        {
-          title: "Advisory Board",
-          members: [
-            { name: "Mr. Salim Umar Desai", title: "Ex-Officio President", image: "/024.png" },
-            { name: "Mr. Mohammed Saleh Burud", title: "Patron", image: "/025.png" },
-            { name: "Maulana Nisar Daroge", title: "Advisor", image: "/026.png" },
-            { name: "Dr. Abdul Razzak Rumane", title: "Advisor", image: "/027.png" },
-          ],
-        },
-      ],
-    },
+    "2022": { sections: [] }, // Add data for 2022 if available
+    "2023": { sections: [] }, // Add data for 2023 if available
   };
 
   return (
     <div className="w-full min-h-screen mt-[50px]">
       {/* Header */}
       <div className="flex items-center justify-center mb-7">
-        <h1 className="text-2xl font-semibold capitalize">Executive Committee</h1>
+        <h1 className="text-2xl font-semibold capitalize">Coordination Committee</h1>
       </div>
 
       {/* Year Buttons */}

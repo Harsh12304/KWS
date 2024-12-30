@@ -2,13 +2,14 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen ">
       {/* Image Section */}
       <div className="relative w-full h-full">
         <img
           src="/Ahero.jpg"
           className="absolute inset-0 w-full h-full object-cover z-0"
           alt="Hero Background"
+           loading="lazy"
         />
 
         {/* Transparent Overlay */}
