@@ -239,15 +239,15 @@ const Navbar = () => {
                             CONTACT US
                         </a>
                     </li>
-                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-blue-500' : ''}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-blue-500' : ''}`}>
                         <a
-                            href="/contact"
+                            href="#"
                             className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
                         >
                             REGISTER
                         </a>
                     </li>
-                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-blue-500' : ''}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-blue-500' : ''}`}>
                         <a
                             href="/#"
                             className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
