@@ -25,7 +25,7 @@ const Hero = () => {
             Kokan Welfare Society
           </h1>
           <hr className="w-3/4 sm:w-1/2 mx-auto border-t-2 border-white mt-2" />
-          <p className="mt-4 text-xs sm:text-sm md:text-base font-bold uppercase">
+          <p className="mt-4 text-xl sm:text-xl md:text-xl font-bold uppercase">
             Together we will Rebuild our Future
           </p>
         </motion.div>

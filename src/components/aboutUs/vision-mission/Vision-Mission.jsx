@@ -44,7 +44,7 @@ const VisionMission = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-2xl font-semibold capitalize">Our Objectives</h2>
+        <h1 className="text-3xl font-semibold uppercase">Our Objectives</h1>
       </motion.div>
 
       {/* Objective Boxes */}

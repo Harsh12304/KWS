@@ -24,8 +24,8 @@ const Story = () => {
       <div className="flex flex-col items-center sm:items-start flex-1 mt-6 sm:mt-0 px-4">
         {/* Enlarged Green Box */}
         <motion.div className="w-full max-w-[90%] sm:max-w-[720px] h-auto bg-[#67B291] flex flex-col items-center justify-center px-6 md:px-12 py-8 sm:py-10 relative shadow-md">
-          <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center relative">
-            <span className="text-[#000]">About</span> Our Story
+          <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center relative uppercase ">
+            <span className="text-[#000]">Our</span> Story
           </h2>
           <hr className="w-full sm:w-[85%] md:w-[75%] border-t-3 border-white mt-3 rotate-3 origin-left" />
         </motion.div>

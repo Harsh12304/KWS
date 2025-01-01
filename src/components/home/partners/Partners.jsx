@@ -33,14 +33,14 @@ const Brands = () => {
   }, []);
 
   return (
-    <section className="pt-12 overflow-hidden ">
+    <section className="pt-12 overflow-hidden uppercase  ">
       <div className="container mx-auto px-4 mb-16 ">
         {/* Heading Section */}
         <div className="text-center mb-10 bg-[#67B291] w-full h-[20vh] flex flex-col items-center justify-center">
-          <h1 className="text-[36px] md:text-[48px] font-bold text-[#000]">
+          <h2 className="text-[36px] md:text-[48px] font-bold text-[#000]">
             Our Partners
-          </h1>
-          <p className="text-[16px] md:text-[20px] text-white leading-[1.5]">
+          </h2>
+          <p className="text-[16px] md:text-[20px] text-white leading-[1.5] -mt-2 ">
             Trusted Collaborative Allies
           </p>
         </div>

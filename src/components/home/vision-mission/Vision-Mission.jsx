@@ -2,8 +2,8 @@ import React from 'react';
 
 const MissionAndVision = () => {
   return (
-    <div className="w-full py-12 bg-[#DCEBE2] flex flex-col items-center border border-black">
-      <h2 className="text-black font-bold text-4xl sm:text-5xl mb-8 text-center">
+    <div className="w-full py-12 bg-[#DCEBE2] flex flex-col items-center border shadow-lg ">
+      <h2 className="text-black font-bold text-4xl sm:text-5xl mb-8 text-center uppercase ">
         Our <span className="text-[#478168]">Mission</span> and <span className="text-[#478168]">Vision</span>
       </h2>
 

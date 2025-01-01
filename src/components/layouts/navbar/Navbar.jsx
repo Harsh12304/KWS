@@ -20,7 +20,7 @@ const Navbar = () => {
 
     // Helper function to determine if the path is under a specific section
     const isActive = (section) => {
-        return pathname.includes(section) ? 'text-blue-500' : '';
+        return pathname.includes(section) ? 'bg-blue-500 text-white' : ''; // Add bg-blue-500 for active section
     };
 
     // Close dropdowns when clicking outside
@@ -53,7 +53,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-blue-500 shadow-md">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2  shadow-md">
             <div className="container mx-auto flex items-center justify-between px-5 py-3">
                 {/* Logo Section */}
                 <div className="flex items-center gap-4">
@@ -102,7 +102,7 @@ const Navbar = () => {
                     </li>
                     <li
                         ref={aboutDropdownRef}
-                        className={`relative cursor-pointer ${isActive('/about') ? 'text-blue-500' : ''}`}
+                        className={`relative cursor-pointer ${isActive('/about') ? 'text-blue-500 ' : ''}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setAboutDropdownOpen, aboutDropdownOpen)}
@@ -116,7 +116,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/who-we-are"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/who-we-are')}`}
                                         >
                                             Who We Are
                                         </a>
@@ -124,7 +124,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/president-message"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/president-message')}`}
                                         >
                                             President's Message
                                         </a>
@@ -132,7 +132,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/vision-mission"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/vision-mission')}`}
                                         >
                                             Our Vision & Mission
                                         </a>
@@ -140,7 +140,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/executive-committee"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/executive-committee')}`}
                                         >
                                             Executive Committee
                                         </a>
@@ -148,7 +148,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/volunteer-committee"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/volunteer-committee')}`}
                                         >
                                             Volunteer Committee
                                         </a>
@@ -156,7 +156,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/coordination-committee"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/coordination-committee')}`}
                                         >
                                             Coordination Committee
                                         </a>
@@ -167,7 +167,7 @@ const Navbar = () => {
                     </li>
                     <li
                         ref={dropdownRef}
-                        className={`relative cursor-pointer ${isActive('/downloads') ? 'text-blue-500' : ''}`}
+                        className={`relative cursor-pointer ${isActive('/downloads') ? 'text-blue-500' : 'text-black'}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setDropdownOpen, dropdownOpen)}
@@ -181,7 +181,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/downloads/souvenirs"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/downloads/souvenirs')}`}
                                         >
                                             Souvenirs
                                         </a>
@@ -189,7 +189,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/downloads/mela"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/downloads/mela')}`}
                                         >
                                             Kokan Mela
                                         </a>
@@ -214,7 +214,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/media/photo-gallery"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/media/photo-gallery')}`}
                                         >
                                             Photo Gallery
                                         </a>
@@ -222,7 +222,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/media/video-gallery"
-                                            className="block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/media/video-gallery')}`}
                                         >
                                             Video Gallery
                                         </a>

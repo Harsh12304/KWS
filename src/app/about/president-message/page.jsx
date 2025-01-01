@@ -14,7 +14,6 @@ function page() {
     return (
       <>
         <Navbar/>
-        <Hero/>
         <PresidentMessage/>
         <Footer/>
         <BackToTopButton />

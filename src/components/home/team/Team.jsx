@@ -20,11 +20,11 @@ const Team = () => {
     <div className="w-full py-12 bg-white flex flex-col items-center sm:items-start sm:flex-row">
       {/* Text Section */}
       <div className="sm:w-1/3 px-6 sm:pl-12">
-        <p className="text-[#478168] font-semibold text-sm mb-2">
+        <p className="text-[#478168] font-semibold text-[20px] mb-2">
           Leadership.Vision.Unity.
         </p>
         <h2 className="text-black font-bold text-4xl sm:text-5xl mb-4">
-          Meet our<br />Team <br /> Members
+          Meet our<br />Team  Members
         </h2>
       </div>
 

@@ -10,7 +10,7 @@ const PresidentMessage = () => {
 
       {/* Section Title */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center text-[#5444CB] mb-8 md:mb-12 underline"
+        className="text-4xl md:text-5xl font-bold text-center text-[#3B82F6] mb-8 md:mb-12 underline uppercase "
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
