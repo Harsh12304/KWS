@@ -33,24 +33,27 @@ const Brands = () => {
   }, []);
 
   return (
-    <section className="pt-12 overflow-hidden uppercase  ">
-      <div className="container mx-auto px-4 mb-16 ">
+    <section className="pt-12 overflow-hidden uppercase bg-[#EDDCB9]">
+      <div className="container mx-auto px-4 mb-16">
         {/* Heading Section */}
-        <div className="text-center mb-10 bg-[#67B291] w-full h-[20vh] flex flex-col items-center justify-center">
+        <div className="text-center mb-16 w-full h-[20vh] flex flex-col items-center justify-center">
+          <p className="text-[16px] md:text-[20px] text-[#193540] leading-[1.5] -mt-2">
+            Trusted Collaborative Allies
+          </p>
           <h2 className="text-[36px] md:text-[48px] font-bold text-[#000]">
             Our Partners
           </h2>
-          <p className="text-[16px] md:text-[20px] text-white leading-[1.5] -mt-2 ">
-            Trusted Collaborative Allies
-          </p>
+          <img src="/partners.png" alt="Partners Logo" />
         </div>
+
+        {/* Scrolling Brands Section */}
         <div className="relative overflow-hidden">
           <motion.div
             className="flex gap-8"
             animate={{ x: ["0%", "-100%"] }}
             transition={{
               repeat: Infinity,
-              duration: 20,
+              duration: 10,
               ease: "linear",
             }}
           >
@@ -64,16 +67,10 @@ const Brands = () => {
   );
 };
 
-export default Brands;
-
 const SingleBrand = ({ brand }) => {
   const { image, name } = brand;
 
-  const isPng = image.toLowerCase().endsWith(".png");
-
-  const containerClasses = `relative aspect-square w-32 h-32 lg:w-48 lg:h-48 opacity-100 transition ${
-    isPng ? "bg-white" : "bg-transparent"
-  } flex items-center justify-center rounded-lg`;
+  const containerClasses = `relative aspect-square w-32 h-32 lg:w-48 lg:h-48 opacity-100 transition shadow-none flex items-center justify-center`;
 
   return (
     <div className={containerClasses}>
@@ -81,3 +78,5 @@ const SingleBrand = ({ brand }) => {
     </div>
   );
 };
+
+export default Brands;

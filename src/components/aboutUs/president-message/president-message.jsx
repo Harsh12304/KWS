@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 
 const PresidentMessage = () => {
   return (
-    <div className="w-full py-10 px-5 bg-white">
+    <div className="w-full py-10 px-5 bg-[#EDDCB9]">
       {/* Spacer for Navbar */}
       <div className="h-20"></div>
 
       {/* Section Title */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center text-[#3B82F6] mb-8 md:mb-12 underline uppercase "
+        className="text-4xl md:text-5xl font-bold text-center text-[#193540] mb-8 md:mb-12 underline uppercase "
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -33,13 +33,13 @@ const PresidentMessage = () => {
             <img
               src="/president.png"
               alt="President Aslam Thakur"
-              className="w-40 h-40 md:w-64 md:h-64 object-cover border-4 border-blue-600 shadow-xl"
+              className="w-40 h-40 md:w-64 md:h-64 object-cover border-transparent shadow-xl"
             />
           </div>
 
           {/* Name Section */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-800 mb-2">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-[#193540] mb-2">
               Aslam Thakur
             </h2>
             <p className="text-lg md:text-xl font-semibold text-gray-600">
@@ -56,7 +56,7 @@ const PresidentMessage = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-xl md:text-2xl font-bold text-gray-800 italic mb-4 md:mb-6">
+          <p className="text-xl md:text-2xl font-bold text-[#193540] italic mb-4 md:mb-6">
             Assalamu Alaikum
           </p>
         </motion.div>

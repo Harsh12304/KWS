@@ -1,15 +1,14 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation'; // For detecting active route
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-    const pathname = usePathname(); // Get current route
+    const pathname = usePathname();
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
     const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    // Refs to track dropdown elements
     const dropdownRef = useRef(null);
     const mediaDropdownRef = useRef(null);
     const aboutDropdownRef = useRef(null);
@@ -18,12 +17,10 @@ const Navbar = () => {
         setState(!currentState);
     };
 
-    // Helper function to determine if the path is under a specific section
     const isActive = (section) => {
-        return pathname.includes(section) ? 'bg-blue-500 text-white' : ''; // Add bg-blue-500 for active section
+        return pathname.includes(section) ? 'bg-[#EBD060] text-[#193540]' : 'text-[#193540]';
     };
 
-    // Close dropdowns when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -53,21 +50,19 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2  shadow-md">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 shadow-md font-[\'Exo 2\']">
             <div className="container mx-auto flex items-center justify-between px-5 py-3">
-                {/* Logo Section */}
                 <div className="flex items-center gap-4">
                     <a href="/">
                         <img src="/kws-logo.png" alt="Logo" className="h-10 w-auto sm:h-16" />
                     </a>
-                    <span className="text-lg sm:text-2xl font-bold text-blue-500">
+                    <span className="text-base md:text-lg lg:text-2xl font-bold text-[#193540]">
                         Kokan Welfare Society, Kuwait
                     </span>
                 </div>
 
-                {/* Mobile Menu Toggle */}
                 <button
-                    className="block sm:hidden text-blue-500 focus:outline-none"
+                    className="block sm:hidden text-[#193540] focus:outline-none"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     <svg
@@ -86,27 +81,26 @@ const Navbar = () => {
                     </svg>
                 </button>
 
-                {/* Navigation Links */}
                 <ul
                     className={`${
                         mobileMenuOpen ? 'block' : 'hidden'
                     } sm:flex flex-col sm:flex-row gap-4 sm:gap-8 items-center list-none m-0 p-0 w-full sm:w-auto sm:static absolute top-full left-0 bg-white sm:bg-transparent shadow-md sm:shadow-none`}
                 >
-                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-blue-500' : ''}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/"
-                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
                         >
                             HOME
                         </a>
                     </li>
                     <li
                         ref={aboutDropdownRef}
-                        className={`relative cursor-pointer ${isActive('/about') ? 'text-blue-500 ' : ''}`}
+                        className={`relative cursor-pointer ${pathname.includes('/about') ? 'text-[#EBD060]' : 'text-[#193540]'}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setAboutDropdownOpen, aboutDropdownOpen)}
-                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
                         >
                             ABOUT US
                         </span>
@@ -116,7 +110,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/who-we-are"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/who-we-are')}`}
+                                            className={`block px-4 py-2 ${isActive('/about/who-we-are')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Who We Are
                                         </a>
@@ -124,7 +118,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/president-message"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/president-message')}`}
+                                            className={`block px-4 py-2 ${isActive('/about/president-message')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             President's Message
                                         </a>
@@ -132,7 +126,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/vision-mission"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/vision-mission')}`}
+                                            className={`block px-4 py-2 ${isActive('/about/vision-mission')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Our Vision & Mission
                                         </a>
@@ -140,7 +134,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/executive-committee"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/executive-committee')}`}
+                                            className={`block px-4 py-2 ${isActive('/about/executive-committee')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Executive Committee
                                         </a>
@@ -148,7 +142,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/volunteer-committee"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/volunteer-committee')}`}
+                                            className={`block px-4 py-2 ${isActive('/about/volunteer-committee')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Volunteer Committee
                                         </a>
@@ -156,7 +150,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/about/coordination-committee"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/about/coordination-committee')}`}
+                                            className={`block px-4 py-2 ${isActive('/about/coordination-committee')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Coordination Committee
                                         </a>
@@ -167,11 +161,11 @@ const Navbar = () => {
                     </li>
                     <li
                         ref={dropdownRef}
-                        className={`relative cursor-pointer ${isActive('/downloads') ? 'text-blue-500' : 'text-black'}`}
+                        className={`relative cursor-pointer ${pathname.includes('/downloads') ? 'text-[#EBD060]' : 'text-[#193540]'}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setDropdownOpen, dropdownOpen)}
-                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
                         >
                             DOWNLOAD
                         </span>
@@ -181,7 +175,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/downloads/souvenirs"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/downloads/souvenirs')}`}
+                                            className={`block px-4 py-2 ${isActive('/downloads/souvenirs')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Souvenirs
                                         </a>
@@ -189,7 +183,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/downloads/mela"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/downloads/mela')}`}
+                                            className={`block px-4 py-2 ${isActive('/downloads/mela')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Kokan Mela
                                         </a>
@@ -200,11 +194,11 @@ const Navbar = () => {
                     </li>
                     <li
                         ref={mediaDropdownRef}
-                        className={`relative cursor-pointer ${isActive('/media') ? 'text-blue-500' : ''}`}
+                        className={`relative cursor-pointer ${pathname.includes('/media') ? 'text-[#EBD060]' : 'text-[#193540]'}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setMediaDropdownOpen, mediaDropdownOpen)}
-                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
                         >
                             MEDIA
                         </span>
@@ -214,7 +208,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/media/photo-gallery"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/media/photo-gallery')}`}
+                                            className={`block px-4 py-2 ${isActive('/media/photo-gallery')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Photo Gallery
                                         </a>
@@ -222,7 +216,7 @@ const Navbar = () => {
                                     <li>
                                         <a
                                             href="/media/video-gallery"
-                                            className={`block px-4 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 ${isActive('/media/video-gallery')}`}
+                                            className={`block px-4 py-2 ${isActive('/media/video-gallery')} hover:bg-[#EBD060] hover:text-[#193540] transition-colors duration-300 text-sm md:text-lg lg:text-base`}
                                         >
                                             Video Gallery
                                         </a>
@@ -231,26 +225,18 @@ const Navbar = () => {
                             </div>
                         )}
                     </li>
-                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-blue-500' : ''}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/contact"
-                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
                         >
                             CONTACT US
                         </a>
                     </li>
-                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-blue-500' : ''}`}>
-                        <a
-                            href="#"
-                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
-                        >
-                            REGISTER
-                        </a>
-                    </li>
-                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-blue-500' : ''}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/#"
-                            className="hover:text-blue-500 transition-colors duration-300 block py-2 sm:py-0"
+                            className="login-btn hover:text-[#193540] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 rounded-2xl bg-[#EBD060] px-5 text-[#193540] font-bold text-sm md:text-lg lg:text-xl"
                         >
                             LOGIN
                         </a>

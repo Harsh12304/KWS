@@ -17,23 +17,23 @@ const Team = () => {
   ];
 
   return (
-    <div className="w-full py-12 bg-white flex flex-col items-center sm:items-start sm:flex-row">
-      {/* Text Section */}
-      <div className="sm:w-1/3 px-6 sm:pl-12">
-        <p className="text-[#478168] font-semibold text-[20px] mb-2">
+    <div className="w-full py-12 bg-white">
+      {/* Centered Heading Section */}
+      <div className="text-center px-4 mb-12">
+        <p className="text-[#193540] font-semibold text-[18px] sm:text-[20px] mb-2">
           Leadership.Vision.Unity.
         </p>
-        <h2 className="text-black font-bold text-4xl sm:text-5xl mb-4">
-          Meet our<br />Team  Members
+        <h2 className="text-[#EBD060] font-bold text-3xl sm:text-4xl lg:text-5xl">
+          Meet our Team Members
         </h2>
       </div>
 
       {/* Image Section */}
-      <div className="flex-1 flex justify-center sm:justify-start gap-6 flex-wrap sm:flex-nowrap px-6 sm:pr-12">
+      <div className="flex flex-wrap justify-center gap-10 px-6">
         {teamData.map((member, index) => (
           <motion.div
             key={index}
-            className="relative w-60 h-60 overflow-hidden rounded-none"
+            className="relative w-full sm:w-[220px] sm:h-[220px] lg:w-[300px] lg:h-[300px] overflow-hidden rounded-lg shadow-lg"
             variants={imageVariants}
             initial="initial"
             whileInView="whileInView"
@@ -50,8 +50,7 @@ const Team = () => {
 
             {/* Hover Overlay */}
             <motion.div
-              className="absolute inset-0 bg-[#478168] bg-opacity-70 flex items-center justify-center text-white text-center px-4 opacity-0 transition-opacity duration-300"
-              whileHover={{ opacity: 1 }}
+              className="absolute inset-0 bg-[#193540] bg-opacity-70 flex items-center justify-center text-white text-center px-4 opacity-0 transition-opacity duration-300 hover:opacity-100"
             >
               <p className="text-lg font-semibold">{member.text}</p>
             </motion.div>
