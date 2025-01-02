@@ -5,9 +5,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const VisionMission = () => {
-    useEffect(() => {
+  useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+  
   return (
     <div className="w-full min-h-screen mt-[120px]">
       {/* Vision Image */}
@@ -18,7 +19,7 @@ const VisionMission = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <img src="/image.png" alt="vision" />
+        <img className="w-full max-w-full object-cover " src="/image.png" alt="vision" />
       </motion.div>
 
       {/* Vision Statement */}
@@ -52,14 +53,14 @@ const VisionMission = () => {
         {Array.from({ length: 9 }, (_, i) => (
           <motion.div
             key={i}
-            className="h-[200px] w-full bg-[#C0DDCF] rounded-3xl p-4 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+            className="h-[200px] w-full bg-[#EDDCB9] rounded-3xl p-4 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
           >
-            <img className="w-16 h-16" src={`/${i + 1}.png`} alt={`icon ${i + 1}`} />
-            <p className="text-xl font-medium text-center mt-4">
+            <img className="w-16 h-16 filter fill-black " src={`/${i + 1}.png`} alt={`icon ${i + 1}`} />
+            <p className="text-xl font-medium text-black text-center mt-4 font-[Exo 2]">
               {getObjectiveText(i)}
             </p>
           </motion.div>
@@ -71,14 +72,14 @@ const VisionMission = () => {
         {Array.from({ length: 2 }, (_, i) => (
           <motion.div
             key={i + 9}
-            className="h-[200px] w-full bg-[#C0DDCF] rounded-3xl p-4 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+            className="h-[200px] w-full bg-[#EDDCB9] rounded-3xl p-4 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: (i + 9) * 0.2 }}
           >
-            <img className="w-16 h-16" src={`/${i + 10}.png`} alt={`icon ${i + 10}`} />
-            <p className="text-xl font-medium text-center mt-4">
+            <img className="w-16 h-16 filter black" src={`/${i + 10}.png`} alt={`icon ${i + 10}`} />
+            <p className="text-xl font-medium text-black text-center mt-4 font-[Exo 2]">
               {getObjectiveText(i + 9)}
             </p>
           </motion.div>

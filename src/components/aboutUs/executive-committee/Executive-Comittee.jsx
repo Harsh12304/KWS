@@ -144,7 +144,7 @@ const ExecutiveCommittee = () => {
   </div>
 
   {/* Team Display */}
-  <div className="px-12 md:mx-12 space-y-1">
+  <div className="px-12 md:mx- space-y-1">
     {teamData[selectedYear]?.sections.length > 0 ? (
       teamData[selectedYear]?.sections.map((section, idx) => (
         <div key={idx}>
@@ -154,23 +154,23 @@ const ExecutiveCommittee = () => {
           </div>
 
           {/* Member Cards - Grid starts here */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16  ">
             {section.members.map((member, index) => (
               <div
                 key={index}
-                className="w-[250px] h-[180px] bg-[#548477] text-black relative transition-transform transform hover:scale-105 duration-300 hover:text-white "
+                className="w-[200px] h-[250px] bg-[#EDDCB9] text-[#000000] relative transition-transform transform hover:scale-80 duration-300 hover:text-white hover:bg-[#193540] "
               >
                 {/* Image */}
-                <div className="relative w-full h-[100px] flex justify-center items-center -mt-5 top-[-20px]">
+                <div className="relative w-full h-[100px] flex justify-center items-center mt-5 top-[0px]">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-[120px] h-[130px] rounded-full border-white"
+                    className="w-[80px] h-[130px] rounded-full border-white"
                   />
                 </div>
 
                 {/* Member Info */}
-                <div className="flex flex-col items-center justify-center text-center py-1">
+                <div className="flex flex-col items-center justify-center text-center mt-2 py-1">
                   <p className="text-lg ">{member.title}</p>
                   <h3 className="text-lg font-semibold break-words">{member.name}</h3>
                 </div>
