@@ -17,7 +17,6 @@ function page() {
       <>
         <Navbar/>
         <PhotoGallery/>
-        <VideoGallery/>
         <Footer/>
         <BackToTopButton />
 

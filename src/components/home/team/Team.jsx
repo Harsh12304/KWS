@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Team = () => {
   const imageVariants = {
@@ -11,9 +12,9 @@ const Team = () => {
 
   // Array of images with corresponding hover text
   const teamData = [
-    { src: '/Frame1.png', text: 'Office Bearer and Executive Committee Members' },
-    { src: '/Frame2.png', text: 'Coordination Committee Members' },
-    { src: '/Frame3.png', text: 'Volunteer Committee Members' },
+    { src: '/Frame1.png', text: 'Office Bearer and Executive Committee Members', link: '/' },
+    { src: '/Frame2.png', text: 'Coordination Committee Members', link: '/' },
+    { src: '/Frame3.png', text: 'Volunteer Committee Members', link: '/ ' },
   ];
 
   return (
@@ -50,9 +51,16 @@ const Team = () => {
 
             {/* Hover Overlay */}
             <motion.div
-              className="absolute inset-0 bg-[#193540] bg-opacity-70 flex items-center justify-center text-white text-center px-4 opacity-0 transition-opacity duration-300 hover:opacity-100"
+              className="absolute inset-0 bg-[#193540] bg-opacity-70 flex flex-col items-center justify-center text-white text-center px-4 opacity-0 transition-opacity duration-300 hover:opacity-100"
             >
-              <p className="text-lg font-semibold">{member.text}</p>
+              <p className="text-lg font-semibold mb-4">{member.text}</p>
+
+              {/* Button */}
+              <Link className="px-6 py-2 bg-[#EBD060] text-[#193540] font-semibold rounded-lg hover:bg-[#D4A950] transition-colors duration-300" href={member.link}>
+              
+                  View Committee
+                
+              </Link>
             </motion.div>
           </motion.div>
         ))}

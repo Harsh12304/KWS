@@ -62,7 +62,7 @@ const Navbar = () => {
                 </div>
 
                 <button
-                    className="block sm:hidden text-[#193540] focus:outline-none"
+                    className="flex items-center just sm:hidden text-[#193540] focus:outline-none"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     <svg
@@ -165,7 +165,7 @@ const Navbar = () => {
                     >
                         <span
                             onClick={() => toggleDropdown(setDropdownOpen, dropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
                         >
                             DOWNLOAD
                         </span>
@@ -198,7 +198,7 @@ const Navbar = () => {
                     >
                         <span
                             onClick={() => toggleDropdown(setMediaDropdownOpen, mediaDropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
                         >
                             MEDIA
                         </span>
@@ -228,15 +228,23 @@ const Navbar = () => {
                     <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/contact"
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
                         >
                             CONTACT US
+                        </a>
+                    </li>
+                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
+                        <a
+                            href="/contact"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
+                        >
+                            Register
                         </a>
                     </li>
                     <li className={`relative cursor-pointer ${pathname === '/' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/#"
-                            className="login-btn hover:text-[#193540] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 rounded-2xl bg-[#EBD060] px-5 text-[#193540] font-bold text-sm md:text-lg lg:text-xl"
+                            className="login-btn hover:text-[#193540] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 rounded-2xl bg-[#EBD060] px-5 text-[#193540] font-bold text-sm md:text-sm lg:text-lg"
                         >
                             LOGIN
                         </a>

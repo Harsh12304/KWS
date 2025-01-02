@@ -44,29 +44,29 @@ const KokanMelaPage = () => {
 
       {/* Page Heading */}
       <motion.h1
-        className="text-3xl sm:text-5xl font-bold text-center text-[#5444CB] mb-8 sm:mb-12 font-merriweather"
+        className="text-3xl sm:text-5xl font-bold text-center text-[#193540] mb-8 sm:mb-12 font-merriweather"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        Kokan Mela Sports
+        Kokan Mela Sports <span className='h-10 w-10' >🏆</span>
       </motion.h1>
 
       {/* Notice Section */}
       <motion.div
-        className="mb-8 sm:mb-12 flex flex-col items-center gap-4"
+        className="mb-8 sm:mb-12 flex flex-col items-center border-2 shadow-md  gap-4"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="flex flex-col items-center mb-4">
-          <span className="text-[#D9534F] text-4xl sm:text-5xl mb-2">📢</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-black">Notice</h2>
+        <div className="flex flex-col items-center mb-4 ">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black">Notice  <span className="text-[#D9534F] text-4xl sm:text-5xl mb-2">📢</span>
+          </h2>
         </div>
-        <p className="text-base sm:text-lg font-sans text-center">
-          New date for <strong className="font-bold">Kokan Mela</strong> is{' '}
+        <p className="text-base sm:text-lg font-sans text-center mb-2 ">
+        <span className=' h- w-1 bg-red-700 text-white p-2 rounded-lg text-[15px] mr-4 ' > !</span> New date for <strong className="font-bold">  Kokan Mela</strong> is{' '}
           <motion.strong
             className="text-red-600 font-bold"
             initial={{ opacity: 0.8 }}

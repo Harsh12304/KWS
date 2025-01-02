@@ -17,7 +17,6 @@ function page() {
       <>
         <Navbar/>
         <PicnicPage2022/>
-        <IslamicCompetitionPage/>
         <Footer/>
         <BackToTopButton />
 

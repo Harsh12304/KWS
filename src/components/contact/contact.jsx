@@ -50,7 +50,7 @@ const ContactUsPage = () => {
             <motion.div
               className="bg-white rounded-lg shadow-lg p-4 text-center hover:shadow-2xl transform transition duration-300 hover:scale-105"
             >
-              <div className="text-2xl text-green-600 mb-2">📍</div>
+              <div className="text-3xl text-[#EBD060] mb-4">📍</div>
               <h3 className="font-bold text-lg mb-2">Address</h3>
               <p className="text-sm text-gray-600">
                 Basement of Building No.6,<br />
@@ -61,18 +61,18 @@ const ContactUsPage = () => {
 
             {/* Email Address Card */}
             <motion.div
-              className="bg-white rounded-lg shadow-lg p-4 text-center hover:shadow-2xl transform transition duration-300 hover:scale-105"
+              className="bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 text-center hover:shadow-2xl transform transition duration-300 hover:scale-105"
             >
-              <div className="text-2xl text-blue-600 mb-2">✉️</div>
+              <div className="text-3xl text-[#EBD060] mb-4">✉️</div>
               <h3 className="font-bold text-lg mb-2">Email Address</h3>
               <p className="text-sm text-gray-600">kwskwt@gmail.com</p>
             </motion.div>
 
             {/* Call Us On Card */}
             <motion.div
-              className="bg-white rounded-lg shadow-lg p-4 text-center hover:shadow-2xl transform transition duration-300 hover:scale-105"
+              className="bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 text-center hover:shadow-2xl transform transition duration-300 hover:scale-105"
             >
-              <div className="text-2xl text-red-600 mb-2">📞</div>
+              <div className="text-3xl text-[#EBD060] mb-4">📞</div>
               <h3 className="font-bold text-lg mb-2">Call Us On</h3>
               <p className="text-sm text-gray-600">+91 808 254 40401</p>
             </motion.div>
@@ -112,7 +112,7 @@ const ContactUsPage = () => {
 
           <button
             type="button"
-            className="mt-6 w-full h-[50px] bg-[#548477] text-white rounded-lg shadow-lg hover:bg-[#437065] transition duration-300"
+            className="mt-6 w-full h-[50px] bg-[#EBD060] text-white rounded-lg shadow-lg hover:bg-[#d4b754] transition duration-300"
           >
             Send Message
           </button>
@@ -135,7 +135,7 @@ const ContactUsPage = () => {
           </a>
         </div>
         <button
-          className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-500 transition duration-300"
+          className="mt-6 px-8 py-3 bg-[#EBD060] text-white rounded-lg shadow-lg text-lg hover:bg-[#d4b754] transition duration-300"
           onClick={() =>
             window.open(
               "https://www.google.com/maps/place/29%C2%B019'51.0%22N+48%C2%B003'56.9%22E/@29.321439,48.064216,1729m/data=!3m1!1e3!4m4!3m3!8m2!3d29.3308333!4d48.0658056?hl=en-US&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
@@ -146,8 +146,12 @@ const ContactUsPage = () => {
           Visit Our Location
         </button>
       </div>
+
+      {/* Spacer after Visit Location Button */}
+      <div className="h-24"></div>
     </div>
   );
 };
 
 export default ContactUsPage;
+  

@@ -25,7 +25,7 @@ const Souvenirs = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-100 to-blue-100 flex flex-col items-center p-4 sm:p-6 animate-fadeIn">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-blue-700 text-center mt-[120px] ">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-[#193540] text-center mt-[120px] ">
         Our Souvenirs
       </h1>
 
@@ -36,7 +36,7 @@ const Souvenirs = () => {
             key={pdf.id}
             onClick={() => handleTabChange(pdf.id)}
             className={`py-2 px-3 sm:px-4 text-base sm:text-lg font-semibold focus:outline-none transition-transform transform hover:scale-105 ${
-              activeTab === pdf.id ? 'border-b-4 border-blue-500 text-blue-500' : 'text-gray-500'
+              activeTab === pdf.id ? 'border-b-4 border-[#193540] text-[#193540]' : 'text-gray-500'
             }`}
           >
             {pdf.title.split(' ')[1]} {/* Display only year */}

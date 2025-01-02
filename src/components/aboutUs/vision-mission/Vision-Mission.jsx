@@ -10,6 +10,7 @@ const VisionMission = () => {
   }, []);
   
   return (
+    
     <div className="w-full min-h-screen mt-[120px]">
       {/* Vision Image */}
       <motion.div

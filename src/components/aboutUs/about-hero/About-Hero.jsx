@@ -6,7 +6,7 @@ const Hero = () => {
       {/* Image Section */}
       <div className="relative w-full h-full">
         <img
-          src="/img/about1.png"
+          src="/img/about4.png"
           className="absolute inset-0 w-full h-full sm:h-full sm:max-h-screen object-cover z-0"
           alt="Hero Background"
           loading="lazy"
