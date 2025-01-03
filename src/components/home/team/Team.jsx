@@ -10,18 +10,18 @@ const Team = () => {
     hover: { scale: 1.05 },
   };
 
-  // Array of images with corresponding hover text
+  // Array of images with corresponding hover text and links
   const teamData = [
-    { src: '/32.jpg', text: 'Office Bearer and Executive Committee Members', link: '/' },
-    { src: '/agm-2023.png', text: 'Coordination Committee Members', link: '/' },
-    { src: '/img/about6.png', text: 'Volunteer Committee Members', link: '/ ' },
+    { src: '/32.jpg', text: 'Office Bearer and Executive Committee Members', link: '/about/executive-committee' },
+    { src: '/agm-2023.png', text: 'Coordination Committee Members', link: '/about/coordination-committee' },
+    { src: '/img/about6.png', text: 'Volunteer Committee Members', link: '/about/volunteer-committee' },
   ];
 
   return (
     <div className="w-full py-12 bg-white">
       {/* Centered Heading Section */}
       <div className="text-center px-4 mb-12">
-        <p className="text-[#193540] font-semibold text-[20px] sm:text-[24px] mb-2">
+        <p className="text-[#193540] font-semibold text-[20px] sm:text-[30px] mb-2">
           Leadership.Vision.Unity.
         </p>
         <h2 className="text-[#EBD060] font-bold text-3xl sm:text-4xl lg:text-5xl">
@@ -56,10 +56,11 @@ const Team = () => {
               <p className="text-lg font-semibold mb-4">{member.text}</p>
 
               {/* Button */}
-              <Link className="px-6 py-2 bg-[#EBD060] text-[#193540] font-semibold rounded-lg hover:bg-[#D4A950] transition-colors duration-300" href="Executive-committee">
-              
-                  View Committee
-                
+              <Link
+                href={member.link}  // Dynamically set the link for each button
+                className="px-6 py-2 bg-[#EBD060] text-[#193540] font-semibold rounded-lg hover:bg-[#D4A950] transition-colors duration-300"
+              >
+                View Committee
               </Link>
             </motion.div>
           </motion.div>

@@ -16,7 +16,7 @@ const CoordinationCommittee = () => {
     <div className="w-full min-h-screen mt-[50px]">
       {/* Header */}
       <div className="flex items-center justify-center mb-7">
-        <h1 className="text-2xl font-semibold uppercase">Executive Committee</h1>
+        <h1 className="text-2xl font-semibold uppercase">Volunteer Committee</h1>
       </div>
 
       {/* Year Buttons */}
