@@ -56,7 +56,7 @@ const Team = () => {
               <p className="text-lg font-semibold mb-4">{member.text}</p>
 
               {/* Button */}
-              <Link className="px-6 py-2 bg-[#EBD060] text-[#193540] font-semibold rounded-lg hover:bg-[#D4A950] transition-colors duration-300" href={member.link}>
+              <Link className="px-6 py-2 bg-[#EBD060] text-[#193540] font-semibold rounded-lg hover:bg-[#D4A950] transition-colors duration-300" href="Executive-committee">
               
                   View Committee
                 

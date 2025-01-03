@@ -56,7 +56,7 @@ const Navbar = () => {
                     <a href="/">
                         <img src="/kws-logo.png" alt="Logo" className="h-10 w-auto sm:h-16" />
                     </a>
-                    <span className="text-base md:text-lg lg:text-2xl font-bold text-[#193540]">
+                    <span className="text-base md:text-lg lg:text-2xl font-semibold text-[#193540] uppercase font-['Exo 2'] ">
                         Kokan Welfare Society, Kuwait
                     </span>
                 </div>
@@ -84,12 +84,12 @@ const Navbar = () => {
                 <ul
                     className={`${
                         mobileMenuOpen ? 'block' : 'hidden'
-                    } sm:flex flex-col sm:flex-row gap-4 sm:gap-8 items-center list-none m-0 p-0 w-full sm:w-auto sm:static absolute top-full left-0 bg-white sm:bg-transparent shadow-md sm:shadow-none`}
+                    } sm:flex flex-col sm:flex-row gap-4 sm:gap-6 items-center list-none m-0 p-0 w-full sm:w-auto sm:static absolute top-full left-0 bg-white sm:bg-transparent shadow-md sm:shadow-none`}
                 >
                     <li className={`relative cursor-pointer ${pathname === '/' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/"
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
+                            className="hover:text-[#f3cc27] active:text-[#f3cc27] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px] "
                         >
                             HOME
                         </a>
@@ -100,7 +100,7 @@ const Navbar = () => {
                     >
                         <span
                             onClick={() => toggleDropdown(setAboutDropdownOpen, aboutDropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-xl"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             ABOUT US
                         </span>
@@ -165,7 +165,7 @@ const Navbar = () => {
                     >
                         <span
                             onClick={() => toggleDropdown(setDropdownOpen, dropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             DOWNLOAD
                         </span>
@@ -198,7 +198,7 @@ const Navbar = () => {
                     >
                         <span
                             onClick={() => toggleDropdown(setMediaDropdownOpen, mediaDropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             MEDIA
                         </span>
@@ -228,7 +228,7 @@ const Navbar = () => {
                     <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/contact"
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             CONTACT US
                         </a>
@@ -236,7 +236,7 @@ const Navbar = () => {
                     <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/contact"
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-sm lg:text-lg"
+                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px] text-semibold uppercase "
                         >
                             Register
                         </a>
@@ -244,7 +244,7 @@ const Navbar = () => {
                     <li className={`relative cursor-pointer ${pathname === '/' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
                         <a
                             href="/#"
-                            className="login-btn hover:text-[#193540] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 rounded-2xl bg-[#EBD060] px-5 text-[#193540] font-bold text-sm md:text-sm lg:text-lg"
+                            className="login-btn hover:text-[#193540] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 rounded-2xl bg-[#EBD060] px-5 text-[#193540] font-bold text-sm md:text-lg lg:text-[17px]"
                         >
                             LOGIN
                         </a>
