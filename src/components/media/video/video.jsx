@@ -18,6 +18,9 @@ const VideoGallery = () => {
       link: 'https://youtu.be/TOteVMhi3xo',
       thumbnail: 'https://img.youtube.com/vi/TOteVMhi3xo/hqdefault.jpg',
     },
+  ];
+
+  const videos2 = [
     {
       title: 'KWS Family Musical Chair',
       link: 'https://youtu.be/y04--Jq0czY',
@@ -41,6 +44,31 @@ const VideoGallery = () => {
       <div className="mt-8 space-y-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.map((video, index) => (
+            <a
+              key={index}
+              href={video.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center p-4 bg-white border border-gray-300 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl w-full animate__animated animate__fadeIn animate__delay-1s"
+            >
+              <div className="w-full h-48 bg-white flex items-center justify-center rounded overflow-hidden">
+                <img
+                  src={video.thumbnail}
+                  alt={video.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-lg font-medium text-gray-700 mt-4 text-center">
+                {video.title}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-8 space-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+          {videos2.map((video, index) => (
             <a
               key={index}
               href={video.link}

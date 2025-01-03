@@ -69,7 +69,7 @@ const Story = () => {
       </motion.div>
       {/* Second Component */}
       <motion.div
-        className="relative font-[Cairo] w-full h-auto bg-[#EDDCB9] flex flex-col sm:flex-row-reverse items-center justify-center p-8 sm:p-16"
+        className="relative font-[Cairo] w-full h-auto bg-[#EBD077] flex flex-col sm:flex-row-reverse items-center justify-center p-8 sm:p-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -139,7 +139,7 @@ const Story = () => {
         >
           <img
             className="w-full max-w-full object-cover"
-            src="/story.png"
+            src="/img/about7.png"
             alt="Commitment to Empowerment"
           />
         </motion.div>
@@ -177,7 +177,7 @@ const Story = () => {
       </motion.div>
       {/* Fourth Component */}
       <motion.div
-        className="relative font-[Cairo] w-full h-auto bg-[#EDDCB9] flex flex-col sm:flex-row-reverse items-center justify-center p-8 sm:p-16 mb-16 "
+        className="relative font-[Cairo] w-full h-auto bg-[#EBD077] flex flex-col sm:flex-row-reverse items-center justify-center p-8 sm:p-16 mb-16 "
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -193,7 +193,7 @@ const Story = () => {
         >
           <img
             className="w-full max-w-full object-cover"
-            src="/img/about2.png"
+            src="/img/about6.png"
             alt="UNITY AND EMPOWERMENT"
           />
         </motion.div>

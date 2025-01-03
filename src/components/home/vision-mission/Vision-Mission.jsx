@@ -2,7 +2,7 @@ import React from 'react';
 
 const MissionAndVision = () => {
   return (
-    <div className="w-full py-12 bg-[#EDDCB9] flex flex-col items-center border shadow-lg ">
+    <div className="w-full py-12 bg-[#ebd077] flex flex-col items-center border shadow-lg ">
       <h2 className="text-[#193540] font-bold text-4xl sm:text-5xl mb-8 text-center uppercase ">
         Our Mission and Vision
       </h2>

@@ -12,16 +12,16 @@ const Team = () => {
 
   // Array of images with corresponding hover text
   const teamData = [
-    { src: '/Frame1.png', text: 'Office Bearer and Executive Committee Members', link: '/' },
-    { src: '/Frame2.png', text: 'Coordination Committee Members', link: '/' },
-    { src: '/Frame3.png', text: 'Volunteer Committee Members', link: '/ ' },
+    { src: '/32.jpg', text: 'Office Bearer and Executive Committee Members', link: '/' },
+    { src: '/agm-2023.png', text: 'Coordination Committee Members', link: '/' },
+    { src: '/img/about6.png', text: 'Volunteer Committee Members', link: '/ ' },
   ];
 
   return (
     <div className="w-full py-12 bg-white">
       {/* Centered Heading Section */}
       <div className="text-center px-4 mb-12">
-        <p className="text-[#193540] font-semibold text-[18px] sm:text-[20px] mb-2">
+        <p className="text-[#193540] font-semibold text-[20px] sm:text-[24px] mb-2">
           Leadership.Vision.Unity.
         </p>
         <h2 className="text-[#EBD060] font-bold text-3xl sm:text-4xl lg:text-5xl">

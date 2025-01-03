@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const PresidentMessage = () => {
   return (
-    <div className="w-full py-10 px-5 bg-[#EDDCB9]">
+    <div className="w-full py-10 px-5 bg-white">
       {/* Spacer for Navbar */}
       <div className="h-20"></div>
 

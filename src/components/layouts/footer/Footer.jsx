@@ -54,9 +54,12 @@ const Footer = () => {
             </button>
           </form>
         </div>
+        
       </div>
+      
       {/* Copyright Text */}
-      <div className="text-center text-sm mt-20 font-bold">
+      <hr className='border-t-2 border-[#000] w-full mt-2 mb-6 ' />
+      <div className="text-center text-sm mt-18 font-bold">
         Copyright © 2022. All rights reserved. Kokan Welfare Society Kuwait.
       </div>
     </footer>

@@ -10,10 +10,9 @@ const VisionMission = () => {
   }, []);
   
   return (
-    
     <div className="w-full min-h-screen mt-[120px]">
       {/* Vision Image */}
-      <motion.div
+      {/* <motion.div
         className="image w-full h-15 flex items-center justify-center mb-[120px]"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +20,7 @@ const VisionMission = () => {
         transition={{ duration: 0.8 }}
       >
         <img className="w-full max-w-full object-cover " src="/image.png" alt="vision" />
-      </motion.div>
+      </motion.div> */}
 
       {/* Vision Statement */}
       <motion.div

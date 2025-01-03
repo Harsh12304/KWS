@@ -96,11 +96,11 @@ const Navbar = () => {
                     </li>
                     <li
                         ref={aboutDropdownRef}
-                        className={`relative cursor-pointer ${pathname.includes('/about') ? 'text-[#EBD060]' : 'text-[#193540]'}`}
+                        className={`relative cursor-pointer ${pathname.includes('/about') ? 'text-[#ffc400]' : 'text-[#193540]'}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setAboutDropdownOpen, aboutDropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
+                            className="hover:text-[#ffc400] active:text-[#ffc400] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             ABOUT US
                         </span>
@@ -161,11 +161,11 @@ const Navbar = () => {
                     </li>
                     <li
                         ref={dropdownRef}
-                        className={`relative cursor-pointer ${pathname.includes('/downloads') ? 'text-[#EBD060]' : 'text-[#193540]'}`}
+                        className={`relative cursor-pointer ${pathname.includes('/downloads') ? 'text-[#ffc400]' : 'text-[#193540]'}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setDropdownOpen, dropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
+                            className="hover:text-[#ffc400] active:text-[#ffc400] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             DOWNLOAD
                         </span>
@@ -194,11 +194,11 @@ const Navbar = () => {
                     </li>
                     <li
                         ref={mediaDropdownRef}
-                        className={`relative cursor-pointer ${pathname.includes('/media') ? 'text-[#EBD060]' : 'text-[#193540]'}`}
+                        className={`relative cursor-pointer ${pathname.includes('/media') ? 'text-[#ffc400]' : 'text-[#193540]'}`}
                     >
                         <span
                             onClick={() => toggleDropdown(setMediaDropdownOpen, mediaDropdownOpen)}
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
+                            className="hover:text-[#ffc400] active:text-[#ffc400] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             MEDIA
                         </span>
@@ -225,18 +225,18 @@ const Navbar = () => {
                             </div>
                         )}
                     </li>
-                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#ffc400]' : 'text-[#193540]'}`}>
                         <a
                             href="/contact"
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
+                            className="hover:text-[#ffc400] active:text-[#ffc400] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px]"
                         >
                             CONTACT US
                         </a>
                     </li>
-                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/contact' ? 'text-[#ffc400]' : 'text-[#193540]'}`}>
                         <a
                             href="/contact"
-                            className="hover:text-[#EBD060] active:text-[#EBD060] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px] text-semibold uppercase "
+                            className="hover:text-[#ffc400] active:text-[#ffc400] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px] text-bold uppercase "
                         >
                             Register
                         </a>

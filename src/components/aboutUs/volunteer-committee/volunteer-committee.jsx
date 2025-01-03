@@ -20,21 +20,21 @@ const CoordinationCommittee = () => {
       </div>
 
       {/* Year Buttons */}
-      <div className="btns flex-row flex items-center justify-center mx-2 space-x-0 mb-8">
-          {["2023", "2022", "2021", "2020", "2019", "2018"].map((year) => (
-            <button
-              key={year}
-              onClick={() => setSelectedYear(year)}
-              className={`h-[30px] w-[100px] ${
-                selectedYear === year
-                  ? "bg-[#193540] text-white scale-80"
-                  : "bg-white border-black text-black"
-              } hover:bg-[#193540] hover:text-white active:bg-[#193540] border-[1.5px] transition-all duration-300`}
-            >
-              {year}
-            </button>
-          ))}
-        </div>
+      <div className="btns flex-row flex items-center mx-2 justify-center space-x-0 mb-8">
+  {["2023", "2022", "2021", "2020", "2019", "2018"].map((year) => (
+    <button
+      key={year}
+      onClick={() => setSelectedYear(year)}
+      className={`h-[30px] w-[100px] ${
+        selectedYear === year
+          ? "bg-[#193540] text-white scale-110"  // Selected button, bigger size
+          : "bg-white border-black text-black scale-90" // Unselected buttons, smaller size
+      } hover:bg-[#193540] hover:text-white active:bg-[#193540] border-[1.5px] transition-all duration-300`}
+    >
+      {year}
+    </button>
+  ))}
+</div>
 
 
       {/* Team Display */}
@@ -123,7 +123,9 @@ const CoordinationCommittee = () => {
         ) : (
           <div className="flex flex-col items-center justify-center bg-gray-200 border border-black w-full h-[300px] text-center">
             <h2 className="text-lg font-semibold mb-4">Introducing Our Esteemed Team</h2>
-            <p className="text-gray-500">No data available for the year {selectedYear}.</p>
+            {/* <p className="text-gray-500">No data available for the year {selectedYear}.</p> */}
+            <p className="text-gray-500">COMING SOON.</p>
+
           </div>
         )}
       </div>
