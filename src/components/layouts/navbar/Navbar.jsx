@@ -86,7 +86,7 @@ const Navbar = () => {
                         mobileMenuOpen ? 'block' : 'hidden'
                     } sm:flex flex-col sm:flex-row gap-4 sm:gap-6 items-center list-none m-0 p-0 w-full sm:w-auto sm:static absolute top-full left-0 bg-white sm:bg-transparent shadow-md sm:shadow-none`}
                 >
-                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-[#EBD060]' : 'text-[#193540]'}`}>
+                    <li className={`relative cursor-pointer ${pathname === '/' ? 'text-[#f3cc27]' : 'text-[#193540]'}`}>
                         <a
                             href="/"
                             className="hover:text-[#f3cc27] active:text-[#f3cc27] transition-colors duration-300 block py-3 sm:py-1 text-sm md:text-lg lg:text-[17px] "
