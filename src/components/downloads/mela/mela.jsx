@@ -55,7 +55,7 @@ const KokanMelaPage = () => {
 
       {/* Notice Section */}
       <motion.div
-        className="mb-8 sm:mb-12 flex flex-col items-center border-2 shadow-md  gap-4"
+        className="mb-8 sm:mb-12 flex flex-col items-center   gap-4"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
