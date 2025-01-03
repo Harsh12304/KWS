@@ -3,19 +3,19 @@ import React from 'react';
 const Hero = () => {
   return (
 
-    <div className="w-full h-[60vh] sm:h-[80vh] bg-gray-200">
+    <div className="w-full h-[80%] sm:h-[100%] bg-gray-200">
     {/* Hero Image for Mobile */}
     <img
       src="/mobile-hero.jpg"
       alt="Hero Image"
-      className="w-full h-full object-cover block sm:hidden"
+      className="w-full h-full object-cover block sm:hidden overflow-x-hidden "
     />
 
     {/* Hero Image for Desktop */}
     <img
       src="/img/about4.png"
       alt="Hero Image"
-      className="w-full h-full object-cover hidden sm:block"
+      className="w-full h-full object-cover hidden sm:block overflow-x-hidden "
     />
   </div>
 

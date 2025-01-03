@@ -50,7 +50,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 shadow-md font-[\'Exo 2\']">
+        <nav className="fixed top-0 left-0 right-0 text-center z-50 bg-white border-b-2 shadow-md font-[\'Exo 2\']">
             <div className="container mx-auto flex items-center justify-between px-5 py-3">
                 <div className="flex items-center gap-4">
                     <a href="/">
@@ -62,7 +62,7 @@ const Navbar = () => {
                 </div>
 
                 <button
-                    className="flex items-center just sm:hidden text-[#193540] focus:outline-none"
+                    className="flex items-center  sm:hidden text-[#193540] focus:outline-none"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     <svg

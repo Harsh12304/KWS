@@ -1,18 +1,18 @@
-import Link from 'next/link'; // Import Link for navigation
-import React from 'react';
-import { motion } from 'framer-motion';
+import Link from "next/link"; // Import Link for navigation
+import React from "react";
+import { motion } from "framer-motion";
 
 const Story = () => {
   return (
-    <div className="m-0 p-0"> {/* Remove any global margin or padding */}
-
+    <div className="m-0 p-0">
+      {" "}
+      {/* Remove any global margin or padding */}
       {/* Heading Between Components */}
       <div className="text-center my-12">
         <h2 className="text-3xl sm:text-4xl font-bold uppercase text-[#193540]">
           Who We Are
         </h2>
       </div>
-
       {/* First Component */}
       <motion.div
         className="relative font-[Cairo] w-full h-auto bg-[#193540] flex flex-col sm:flex-row items-center justify-center p-8 sm:p-16"
@@ -58,11 +58,15 @@ const Story = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Kokan Welfare Society, Kuwait (KWS) is founded in 2012 by like-minded people from the Kokan region (coastal Maharashtra) residing in Kuwait. The motivation behind the formation of this association is to bring the community onto a common platform and work together for the development and welfare of all people, especially for those from the Kokan region and generally from India.
+            Kokan Welfare Society, Kuwait (KWS) is founded in 2012 by
+            like-minded people from the Kokan region (coastal Maharashtra)
+            residing in Kuwait. The motivation behind the formation of this
+            association is to bring the community onto a common platform and
+            work together for the development and welfare of all people,
+            especially for those from the Kokan region and generally from India.
           </motion.p>
         </div>
       </motion.div>
-
       {/* Second Component */}
       <motion.div
         className="relative font-[Cairo] w-full h-auto bg-[#EDDCB9] flex flex-col sm:flex-row-reverse items-center justify-center p-8 sm:p-16"
@@ -110,13 +114,13 @@ const Story = () => {
           >
             KWS understands the importance of unity and it is fundamental to its
             activities, consciously promoting brotherhood among the members. We
-            believe that education and economic empowerment of members will uplift
-            the community and contribute to the region and nation-building as a
-            whole, whether it's back home or in the place we work.
+            believe that education and economic empowerment of members will
+            uplift the community and contribute to the region and
+            nation-building as a whole, whether it's back home or in the place
+            we work.
           </motion.p>
         </div>
       </motion.div>
-
       {/* Third Component */}
       <motion.div
         className="relative font-[Cairo] w-full h-auto bg-[#193540] flex flex-col sm:flex-row items-center justify-center p-8 sm:p-16"
@@ -162,11 +166,15 @@ const Story = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-           Kokan Welfare Society, Kuwait (KWS) is founded in 2012 by like-minded people from Kokan region (coastal Maharashtra) residing in Kuwait. The motivation behind the formation of this association is to bring the community onto a common platform and work together for the development and welfare of all people, especially for the people from Kokan region and generally from India.
+            Kokan Welfare Society, Kuwait (KWS) is founded in 2012 by
+            like-minded people from Kokan region (coastal Maharashtra) residing
+            in Kuwait. The motivation behind the formation of this association
+            is to bring the community onto a common platform and work together
+            for the development and welfare of all people, especially for the
+            people from Kokan region and generally from India.
           </motion.p>
         </div>
       </motion.div>
-
       {/* Fourth Component */}
       <motion.div
         className="relative font-[Cairo] w-full h-auto bg-[#EDDCB9] flex flex-col sm:flex-row-reverse items-center justify-center p-8 sm:p-16 mb-16 "
@@ -219,25 +227,31 @@ const Story = () => {
           </motion.p>
         </div>
       </motion.div>
-
       {/* Image & Button Section Above Footer */}
-      <div className="relative w-full h-[200px] mt-12 bg-cover bg-center" style={{ backgroundImage: 'url(/texture.png)' }}>
+      <div
+        className="relative w-full h-[200px] mt-12 bg-cover bg-center"
+        style={{ backgroundImage: "url(/texture.png)" }}
+      >
         <div className="absolute inset-0 flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 py-8">
           {/* Left Side Text */}
           <div className="text-white text-center sm:text-left">
             <h3 className="text-3xl sm:text-4xl font-bold">Be the Change</h3>
-            <p className="mt-4 text-sm sm:text-base">Join us as a volunteer and make a lasting <br /> impact today!</p>
+            <p className="mt-4 text-sm sm:text-base">
+              Join us as a volunteer and make a lasting <br /> impact today!
+            </p>
           </div>
 
           {/* Right Side Button */}
           <div className="flex items-center justify-center sm:justify-end mt-4 sm:mt-0">
-            <Link className="w-[187.82px] h-[60px] bg-[#FFFFFF] text-[#193540] flex items-center justify-center text-lg font-semibold shadow-md hover:bg-[#CBB441] transition duration-300" href="/">
+            <Link
+              className="w-[187.82px] h-[60px] bg-[#FFFFFF] text-[#193540] flex items-center justify-center text-lg font-semibold shadow-md hover:bg-[#CBB441] transition duration-300"
+              href="/"
+            >
               Volunteer Now
             </Link>
           </div>
         </div>
       </div>
-
     </div>
   );
 };
